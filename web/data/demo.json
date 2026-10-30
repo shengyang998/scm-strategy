@@ -1,0 +1,1749 @@
+{
+  "schema_version": "scm-strategy.web/1",
+  "dataset_kind": "synthetic",
+  "generator": {
+    "version": "scm-strategy.equations/1",
+    "seed": 20261030,
+    "parameters": {
+      "participants": 60
+    }
+  },
+  "units": {
+    "speed_kmh": "km/h",
+    "height_cm": "cm",
+    "weight_kg": "kg",
+    "age_years": "year",
+    "navicular_ratio": "1",
+    "foot_size_proxy_cm2": "cm^2",
+    "knee_excursion_deg": "degree",
+    "ankle_excursion_deg": "degree",
+    "contact_ms": "ms",
+    "pressure_peak_N": "N",
+    "effective_area_cm2": "cm^2"
+  },
+  "records": [
+    {
+      "participant_id": "SYN-00001",
+      "speed_kmh": 9.796224092732631,
+      "height_cm": 175.2955345623606,
+      "weight_kg": 56.65095068354278,
+      "age_years": 41.36263503380501,
+      "navicular_ratio": 0.19793950327779852,
+      "foot_size_proxy_cm2": 236.5080227575492,
+      "knee_excursion_deg": 49.723556108017384,
+      "ankle_excursion_deg": 39.213251188218536,
+      "contact_ms": 266.0270938086994,
+      "pressure_peak_N": 1161.0478095296453,
+      "effective_area_cm2": 113.31170877328866
+    },
+    {
+      "participant_id": "SYN-00002",
+      "speed_kmh": 7.5733170190700045,
+      "height_cm": 152.85647567766836,
+      "weight_kg": 81.76789369626488,
+      "age_years": 29.42814178314303,
+      "navicular_ratio": 0.13930799097723737,
+      "foot_size_proxy_cm2": 289.8029339173677,
+      "knee_excursion_deg": 51.52340556846828,
+      "ankle_excursion_deg": 32.44700243882428,
+      "contact_ms": 292.1900181354115,
+      "pressure_peak_N": 1313.5028794419954,
+      "effective_area_cm2": 134.01477424255157
+    },
+    {
+      "participant_id": "SYN-00003",
+      "speed_kmh": 12.3287506778166,
+      "height_cm": 189.56618084283625,
+      "weight_kg": 70.9671247810027,
+      "age_years": 33.44568135361693,
+      "navicular_ratio": 0.12881873818835554,
+      "foot_size_proxy_cm2": 307.87835870580267,
+      "knee_excursion_deg": 53.723624955440954,
+      "ankle_excursion_deg": 39.24059722608922,
+      "contact_ms": 239.87385460152836,
+      "pressure_peak_N": 1593.3116925999648,
+      "effective_area_cm2": 128.90062922693113
+    },
+    {
+      "participant_id": "SYN-00004",
+      "speed_kmh": 7.275740640280574,
+      "height_cm": 165.40522726942774,
+      "weight_kg": 79.2829129585653,
+      "age_years": 60.38524447077225,
+      "navicular_ratio": 0.11840988763111146,
+      "foot_size_proxy_cm2": 279.10329481999884,
+      "knee_excursion_deg": 34.56110215753224,
+      "ankle_excursion_deg": 33.28634423544144,
+      "contact_ms": 292.62204384698003,
+      "pressure_peak_N": 1134.8300460102762,
+      "effective_area_cm2": 119.6104592284451
+    },
+    {
+      "participant_id": "SYN-00005",
+      "speed_kmh": 10.144467274245345,
+      "height_cm": 188.66178810753544,
+      "weight_kg": 89.86162280063651,
+      "age_years": 59.95274599720271,
+      "navicular_ratio": 0.1271864817442648,
+      "foot_size_proxy_cm2": 271.11434555718046,
+      "knee_excursion_deg": 43.37692037731868,
+      "ankle_excursion_deg": 39.716354252505276,
+      "contact_ms": 269.588739844212,
+      "pressure_peak_N": 1538.2969669590072,
+      "effective_area_cm2": 128.77173191816007
+    },
+    {
+      "participant_id": "SYN-00006",
+      "speed_kmh": 10.898322809241762,
+      "height_cm": 173.8790049777073,
+      "weight_kg": 77.4282494654125,
+      "age_years": 21.95964263950432,
+      "navicular_ratio": 0.1186624106927546,
+      "foot_size_proxy_cm2": 286.7186967662168,
+      "knee_excursion_deg": 41.82521143267299,
+      "ankle_excursion_deg": 38.53286605178873,
+      "contact_ms": 263.2252851470372,
+      "pressure_peak_N": 1458.9788513117837,
+      "effective_area_cm2": 117.30082208289498
+    },
+    {
+      "participant_id": "SYN-00007",
+      "speed_kmh": 9.656860253751152,
+      "height_cm": 171.20736618462772,
+      "weight_kg": 53.87870503309557,
+      "age_years": 61.38388323130132,
+      "navicular_ratio": 0.16223283386585516,
+      "foot_size_proxy_cm2": 251.34496223925072,
+      "knee_excursion_deg": 51.03468574247079,
+      "ankle_excursion_deg": 37.64489775681537,
+      "contact_ms": 262.64273430969854,
+      "pressure_peak_N": 1073.4802240702852,
+      "effective_area_cm2": 113.9947287967893
+    },
+    {
+      "participant_id": "SYN-00008",
+      "speed_kmh": 9.270770221415736,
+      "height_cm": 166.3984482501795,
+      "weight_kg": 74.96314449757278,
+      "age_years": 57.75634312957363,
+      "navicular_ratio": 0.1491309301948595,
+      "foot_size_proxy_cm2": 295.5885255534633,
+      "knee_excursion_deg": 48.15348486160795,
+      "ankle_excursion_deg": 36.09803850413839,
+      "contact_ms": 279.75707386780954,
+      "pressure_peak_N": 1341.4753497355625,
+      "effective_area_cm2": 130.23059681220673
+    },
+    {
+      "participant_id": "SYN-00009",
+      "speed_kmh": 11.636114977520377,
+      "height_cm": 166.72783685609215,
+      "weight_kg": 75.21708742833728,
+      "age_years": 33.807374473669505,
+      "navicular_ratio": 0.19926375742541944,
+      "foot_size_proxy_cm2": 302.230101943146,
+      "knee_excursion_deg": 47.95101519852159,
+      "ankle_excursion_deg": 46.1314017307568,
+      "contact_ms": 245.46253857196868,
+      "pressure_peak_N": 1528.8831542527032,
+      "effective_area_cm2": 137.6931223080955
+    },
+    {
+      "participant_id": "SYN-00010",
+      "speed_kmh": 12.733035989047497,
+      "height_cm": 175.45024633388377,
+      "weight_kg": 78.47437769317148,
+      "age_years": 43.69903156051443,
+      "navicular_ratio": 0.13804713896311513,
+      "foot_size_proxy_cm2": 310.14351649130936,
+      "knee_excursion_deg": 57.222576386404356,
+      "ankle_excursion_deg": 35.74877482906678,
+      "contact_ms": 236.96159174663705,
+      "pressure_peak_N": 1832.510953262426,
+      "effective_area_cm2": 133.36683576090016
+    },
+    {
+      "participant_id": "SYN-00011",
+      "speed_kmh": 11.820908380198752,
+      "height_cm": 153.39803232913286,
+      "weight_kg": 79.82758007187563,
+      "age_years": 51.73508185054195,
+      "navicular_ratio": 0.11566130802891378,
+      "foot_size_proxy_cm2": 288.8387956952884,
+      "knee_excursion_deg": 52.11508217002332,
+      "ankle_excursion_deg": 41.4157106312718,
+      "contact_ms": 225.67141479737646,
+      "pressure_peak_N": 1602.8619552605903,
+      "effective_area_cm2": 125.77179381415603
+    },
+    {
+      "participant_id": "SYN-00012",
+      "speed_kmh": 8.974518347306812,
+      "height_cm": 156.95750315462388,
+      "weight_kg": 61.417127616761256,
+      "age_years": 32.89853919150253,
+      "navicular_ratio": 0.1395425222747651,
+      "foot_size_proxy_cm2": 295.28690552541923,
+      "knee_excursion_deg": 44.874164901698784,
+      "ankle_excursion_deg": 38.26006904911424,
+      "contact_ms": 276.8651706795959,
+      "pressure_peak_N": 1073.3091885094254,
+      "effective_area_cm2": 129.58743673083268
+    },
+    {
+      "participant_id": "SYN-00013",
+      "speed_kmh": 11.156980084025761,
+      "height_cm": 173.1200661333855,
+      "weight_kg": 86.07603221906496,
+      "age_years": 34.50337069855585,
+      "navicular_ratio": 0.16956234271431975,
+      "foot_size_proxy_cm2": 293.5122129150458,
+      "knee_excursion_deg": 57.415564941007915,
+      "ankle_excursion_deg": 38.573975517868305,
+      "contact_ms": 236.52632633526903,
+      "pressure_peak_N": 1696.9773716122284,
+      "effective_area_cm2": 133.8059421185322
+    },
+    {
+      "participant_id": "SYN-00014",
+      "speed_kmh": 7.4048223369207875,
+      "height_cm": 168.60544917329995,
+      "weight_kg": 59.93198073748479,
+      "age_years": 53.63041050646718,
+      "navicular_ratio": 0.15404098433267274,
+      "foot_size_proxy_cm2": 250.70474950826684,
+      "knee_excursion_deg": 41.28540727831481,
+      "ankle_excursion_deg": 38.06036547077532,
+      "contact_ms": 315.65834490082545,
+      "pressure_peak_N": 1015.6136140646678,
+      "effective_area_cm2": 114.18733530591601
+    },
+    {
+      "participant_id": "SYN-00015",
+      "speed_kmh": 8.17961349660993,
+      "height_cm": 161.91975134901327,
+      "weight_kg": 78.6211342226502,
+      "age_years": 48.87650878917571,
+      "navicular_ratio": 0.13563070220911622,
+      "foot_size_proxy_cm2": 277.8795215936775,
+      "knee_excursion_deg": 43.86670555270953,
+      "ankle_excursion_deg": 37.845890564536354,
+      "contact_ms": 289.02340707662086,
+      "pressure_peak_N": 1315.6730235834823,
+      "effective_area_cm2": 125.73444236973597
+    },
+    {
+      "participant_id": "SYN-00016",
+      "speed_kmh": 12.638727375075472,
+      "height_cm": 183.13228095422613,
+      "weight_kg": 87.82006848976884,
+      "age_years": 43.920893118078524,
+      "navicular_ratio": 0.1733137321288602,
+      "foot_size_proxy_cm2": 243.70020629223492,
+      "knee_excursion_deg": 50.7726159044066,
+      "ankle_excursion_deg": 43.7860536300367,
+      "contact_ms": 235.4143731480487,
+      "pressure_peak_N": 1725.5188888259897,
+      "effective_area_cm2": 122.61954124751104
+    },
+    {
+      "participant_id": "SYN-00017",
+      "speed_kmh": 8.14894306035166,
+      "height_cm": 160.00290531005325,
+      "weight_kg": 90.59908781008804,
+      "age_years": 22.697851004718743,
+      "navicular_ratio": 0.14362059231119095,
+      "foot_size_proxy_cm2": 265.96331516524526,
+      "knee_excursion_deg": 43.13394785910276,
+      "ankle_excursion_deg": 34.877352654184605,
+      "contact_ms": 275.9941811026221,
+      "pressure_peak_N": 1446.8592147747995,
+      "effective_area_cm2": 126.61844363803907
+    },
+    {
+      "participant_id": "SYN-00018",
+      "speed_kmh": 12.610928073815348,
+      "height_cm": 178.09998348328244,
+      "weight_kg": 78.00296458174972,
+      "age_years": 26.44350385186813,
+      "navicular_ratio": 0.11532530634455049,
+      "foot_size_proxy_cm2": 220.5906264847666,
+      "knee_excursion_deg": 48.537035942047424,
+      "ankle_excursion_deg": 44.0379779274485,
+      "contact_ms": 249.0361934335991,
+      "pressure_peak_N": 1579.7237301462214,
+      "effective_area_cm2": 110.34680319396709
+    },
+    {
+      "participant_id": "SYN-00019",
+      "speed_kmh": 7.922933759975174,
+      "height_cm": 159.81692143037148,
+      "weight_kg": 75.27988072423115,
+      "age_years": 51.860597365938595,
+      "navicular_ratio": 0.12648148471482842,
+      "foot_size_proxy_cm2": 289.28982531231566,
+      "knee_excursion_deg": 43.973739300192186,
+      "ankle_excursion_deg": 36.912215582446834,
+      "contact_ms": 295.3498648486213,
+      "pressure_peak_N": 1241.6372509517996,
+      "effective_area_cm2": 127.80879075823185
+    },
+    {
+      "participant_id": "SYN-00020",
+      "speed_kmh": 8.88676516211923,
+      "height_cm": 152.60820836062643,
+      "weight_kg": 85.78302641406331,
+      "age_years": 24.683279224803012,
+      "navicular_ratio": 0.16923929588819914,
+      "foot_size_proxy_cm2": 271.7860036452429,
+      "knee_excursion_deg": 40.81577252667326,
+      "ankle_excursion_deg": 40.26264794556175,
+      "contact_ms": 261.64469221096584,
+      "pressure_peak_N": 1347.5308126228783,
+      "effective_area_cm2": 127.90452069028066
+    },
+    {
+      "participant_id": "SYN-00021",
+      "speed_kmh": 12.388247349758876,
+      "height_cm": 160.42898368830527,
+      "weight_kg": 71.39924094871012,
+      "age_years": 40.87917001645551,
+      "navicular_ratio": 0.11765719949346037,
+      "foot_size_proxy_cm2": 290.2057329820724,
+      "knee_excursion_deg": 54.12291928123626,
+      "ankle_excursion_deg": 45.3500750761081,
+      "contact_ms": 231.2844084202305,
+      "pressure_peak_N": 1342.4896164692314,
+      "effective_area_cm2": 122.30433257853164
+    },
+    {
+      "participant_id": "SYN-00022",
+      "speed_kmh": 10.125913890755488,
+      "height_cm": 159.34947215723037,
+      "weight_kg": 63.216073616704634,
+      "age_years": 60.075725059668756,
+      "navicular_ratio": 0.1691354984774641,
+      "foot_size_proxy_cm2": 268.7311412884063,
+      "knee_excursion_deg": 55.617352343846285,
+      "ankle_excursion_deg": 31.918027518364525,
+      "contact_ms": 251.11815282821956,
+      "pressure_peak_N": 1239.6696476770835,
+      "effective_area_cm2": 125.64164258955302
+    },
+    {
+      "participant_id": "SYN-00023",
+      "speed_kmh": 10.5009483652487,
+      "height_cm": 188.75914282244239,
+      "weight_kg": 57.67593306020396,
+      "age_years": 36.07251263801182,
+      "navicular_ratio": 0.102606165989603,
+      "foot_size_proxy_cm2": 259.57684095706827,
+      "knee_excursion_deg": 34.355227530062585,
+      "ankle_excursion_deg": 33.73452090025911,
+      "contact_ms": 268.66052826322834,
+      "pressure_peak_N": 1153.9981002498027,
+      "effective_area_cm2": 111.85016267792173
+    },
+    {
+      "participant_id": "SYN-00024",
+      "speed_kmh": 9.904650201363033,
+      "height_cm": 159.35287470363707,
+      "weight_kg": 53.92946914770829,
+      "age_years": 60.10473794806319,
+      "navicular_ratio": 0.19834575485300174,
+      "foot_size_proxy_cm2": 264.47126525273904,
+      "knee_excursion_deg": 48.17597038481081,
+      "ankle_excursion_deg": 41.44335307150079,
+      "contact_ms": 258.0519929603922,
+      "pressure_peak_N": 1123.5514363161194,
+      "effective_area_cm2": 119.65858469125186
+    },
+    {
+      "participant_id": "SYN-00025",
+      "speed_kmh": 7.682243960574065,
+      "height_cm": 173.7491734764852,
+      "weight_kg": 75.57696882301927,
+      "age_years": 31.275510063750634,
+      "navicular_ratio": 0.12395893106349194,
+      "foot_size_proxy_cm2": 216.18882833022926,
+      "knee_excursion_deg": 48.65733042807214,
+      "ankle_excursion_deg": 37.825259509777844,
+      "contact_ms": 292.48198912038265,
+      "pressure_peak_N": 1220.1970586289117,
+      "effective_area_cm2": 107.85982146148065
+    },
+    {
+      "participant_id": "SYN-00026",
+      "speed_kmh": 9.774719968883568,
+      "height_cm": 158.24252949826217,
+      "weight_kg": 53.26342161856838,
+      "age_years": 46.37273511258339,
+      "navicular_ratio": 0.1255271414048982,
+      "foot_size_proxy_cm2": 313.4743747054611,
+      "knee_excursion_deg": 42.46063701992049,
+      "ankle_excursion_deg": 40.21192038283852,
+      "contact_ms": 251.37681207993563,
+      "pressure_peak_N": 1118.8297658290578,
+      "effective_area_cm2": 124.58844790546995
+    },
+    {
+      "participant_id": "SYN-00027",
+      "speed_kmh": 7.591492351990585,
+      "height_cm": 164.49249707617835,
+      "weight_kg": 64.68217092691894,
+      "age_years": 24.880633264845066,
+      "navicular_ratio": 0.19962454297222482,
+      "foot_size_proxy_cm2": 290.3304154343507,
+      "knee_excursion_deg": 37.13014394476912,
+      "ankle_excursion_deg": 29.88991680120814,
+      "contact_ms": 292.05284154146267,
+      "pressure_peak_N": 1026.746134188067,
+      "effective_area_cm2": 134.5287911697479
+    },
+    {
+      "participant_id": "SYN-00028",
+      "speed_kmh": 12.912215637130913,
+      "height_cm": 176.30340628501267,
+      "weight_kg": 75.59789263369038,
+      "age_years": 35.58887251130105,
+      "navicular_ratio": 0.16540177368267073,
+      "foot_size_proxy_cm2": 213.55637848232598,
+      "knee_excursion_deg": 58.371719465017186,
+      "ankle_excursion_deg": 44.26072396116503,
+      "contact_ms": 210.10112108666263,
+      "pressure_peak_N": 1597.0074767066276,
+      "effective_area_cm2": 109.99439269694761
+    },
+    {
+      "participant_id": "SYN-00029",
+      "speed_kmh": 10.635816151202757,
+      "height_cm": 185.05023976127723,
+      "weight_kg": 73.54234223313702,
+      "age_years": 21.773785839795096,
+      "navicular_ratio": 0.18945500759382788,
+      "foot_size_proxy_cm2": 309.5145468200875,
+      "knee_excursion_deg": 53.88803168711498,
+      "ankle_excursion_deg": 44.783293854575014,
+      "contact_ms": 268.5404188840992,
+      "pressure_peak_N": 1431.6647401051534,
+      "effective_area_cm2": 138.61431250886966
+    },
+    {
+      "participant_id": "SYN-00030",
+      "speed_kmh": 11.36161895313543,
+      "height_cm": 188.0636896162862,
+      "weight_kg": 85.19959270429857,
+      "age_years": 45.987626530130996,
+      "navicular_ratio": 0.191329584052504,
+      "foot_size_proxy_cm2": 240.1767455575364,
+      "knee_excursion_deg": 46.49722619430527,
+      "ankle_excursion_deg": 36.298584171073244,
+      "contact_ms": 258.3511388715977,
+      "pressure_peak_N": 1727.9927745238545,
+      "effective_area_cm2": 122.37497172626459
+    },
+    {
+      "participant_id": "SYN-00031",
+      "speed_kmh": 11.587190879557742,
+      "height_cm": 171.5274951834692,
+      "weight_kg": 90.73019656161378,
+      "age_years": 43.86545645358278,
+      "navicular_ratio": 0.10534782040699671,
+      "foot_size_proxy_cm2": 297.11285761626567,
+      "knee_excursion_deg": 45.59109357212855,
+      "ankle_excursion_deg": 34.33421215772851,
+      "contact_ms": 249.50509774797257,
+      "pressure_peak_N": 1932.8270747389502,
+      "effective_area_cm2": 133.29518001545554
+    },
+    {
+      "participant_id": "SYN-00032",
+      "speed_kmh": 11.157329509271026,
+      "height_cm": 178.25461110231032,
+      "weight_kg": 88.4919791473259,
+      "age_years": 32.232751825259406,
+      "navicular_ratio": 0.18598990969289403,
+      "foot_size_proxy_cm2": 217.32870820782964,
+      "knee_excursion_deg": 47.72951860197819,
+      "ankle_excursion_deg": 43.25032562117457,
+      "contact_ms": 259.2425883804217,
+      "pressure_peak_N": 1686.0270973730371,
+      "effective_area_cm2": 118.05482948319234
+    },
+    {
+      "participant_id": "SYN-00033",
+      "speed_kmh": 7.206498436121047,
+      "height_cm": 165.28329255286826,
+      "weight_kg": 91.77997979479483,
+      "age_years": 25.61592466988875,
+      "navicular_ratio": 0.14773565622807278,
+      "foot_size_proxy_cm2": 292.779693961087,
+      "knee_excursion_deg": 38.8992627767332,
+      "ankle_excursion_deg": 43.25577829071416,
+      "contact_ms": 304.64404244620573,
+      "pressure_peak_N": 1380.534606091108,
+      "effective_area_cm2": 138.79269352479062
+    },
+    {
+      "participant_id": "SYN-00034",
+      "speed_kmh": 11.580151887287165,
+      "height_cm": 183.06087215327844,
+      "weight_kg": 78.8500865520667,
+      "age_years": 22.180210108461427,
+      "navicular_ratio": 0.14440836772272259,
+      "foot_size_proxy_cm2": 284.4467429124328,
+      "knee_excursion_deg": 51.27379846316123,
+      "ankle_excursion_deg": 44.702454188962015,
+      "contact_ms": 253.15100414527524,
+      "pressure_peak_N": 1555.922615607084,
+      "effective_area_cm2": 131.27659415337575
+    },
+    {
+      "participant_id": "SYN-00035",
+      "speed_kmh": 9.402327290896995,
+      "height_cm": 181.33888330753524,
+      "weight_kg": 87.97863044468484,
+      "age_years": 41.07140833936437,
+      "navicular_ratio": 0.1551645538356806,
+      "foot_size_proxy_cm2": 314.9850600390107,
+      "knee_excursion_deg": 41.140736480843096,
+      "ankle_excursion_deg": 49.13190147988611,
+      "contact_ms": 290.18973659408164,
+      "pressure_peak_N": 1515.9891047696349,
+      "effective_area_cm2": 140.55535428119563
+    },
+    {
+      "participant_id": "SYN-00036",
+      "speed_kmh": 9.556860040837309,
+      "height_cm": 185.8591540227215,
+      "weight_kg": 49.8428654277343,
+      "age_years": 21.811692283901447,
+      "navicular_ratio": 0.15976954333348906,
+      "foot_size_proxy_cm2": 294.3819041921579,
+      "knee_excursion_deg": 51.685417757034436,
+      "ankle_excursion_deg": 32.32202664171648,
+      "contact_ms": 248.76522586297384,
+      "pressure_peak_N": 971.9511598275332,
+      "effective_area_cm2": 131.01222000367346
+    },
+    {
+      "participant_id": "SYN-00037",
+      "speed_kmh": 9.901100338646417,
+      "height_cm": 158.64570083638625,
+      "weight_kg": 78.84091212178706,
+      "age_years": 52.34674183648689,
+      "navicular_ratio": 0.1368884655580671,
+      "foot_size_proxy_cm2": 298.1513951129446,
+      "knee_excursion_deg": 42.82041689605339,
+      "ankle_excursion_deg": 38.73926682273358,
+      "contact_ms": 275.3781048485257,
+      "pressure_peak_N": 1415.2428666411924,
+      "effective_area_cm2": 128.9112563771521
+    },
+    {
+      "participant_id": "SYN-00038",
+      "speed_kmh": 11.93962090098806,
+      "height_cm": 171.62674887997088,
+      "weight_kg": 78.33782117928479,
+      "age_years": 61.71773485057158,
+      "navicular_ratio": 0.1725528132243087,
+      "foot_size_proxy_cm2": 304.1685414090966,
+      "knee_excursion_deg": 52.90052955635096,
+      "ankle_excursion_deg": 43.81390539119782,
+      "contact_ms": 243.94445142715418,
+      "pressure_peak_N": 1522.9950112059958,
+      "effective_area_cm2": 135.53268732245056
+    },
+    {
+      "participant_id": "SYN-00039",
+      "speed_kmh": 12.412447248163112,
+      "height_cm": 152.97974741839573,
+      "weight_kg": 90.4965744308451,
+      "age_years": 55.30810761306967,
+      "navicular_ratio": 0.18687932235477814,
+      "foot_size_proxy_cm2": 259.35448430847254,
+      "knee_excursion_deg": 61.11575327312929,
+      "ankle_excursion_deg": 38.18587040771252,
+      "contact_ms": 228.24155096345893,
+      "pressure_peak_N": 1790.8829484663809,
+      "effective_area_cm2": 127.81082577635036
+    },
+    {
+      "participant_id": "SYN-00040",
+      "speed_kmh": 8.688277732972224,
+      "height_cm": 171.5667145284639,
+      "weight_kg": 72.47476091066294,
+      "age_years": 58.51284742895959,
+      "navicular_ratio": 0.19079353089627174,
+      "foot_size_proxy_cm2": 286.15852699905696,
+      "knee_excursion_deg": 36.34640436075557,
+      "ankle_excursion_deg": 32.1435750569698,
+      "contact_ms": 293.40808574049674,
+      "pressure_peak_N": 1185.9870675759078,
+      "effective_area_cm2": 131.03244732369316
+    },
+    {
+      "participant_id": "SYN-00041",
+      "speed_kmh": 8.383479398007585,
+      "height_cm": 177.68187934807221,
+      "weight_kg": 64.35651813811751,
+      "age_years": 25.15634921208123,
+      "navicular_ratio": 0.1512799847178688,
+      "foot_size_proxy_cm2": 308.0112698278588,
+      "knee_excursion_deg": 53.89665670671691,
+      "ankle_excursion_deg": 34.51691977151571,
+      "contact_ms": 279.2831739480666,
+      "pressure_peak_N": 1092.9891350749265,
+      "effective_area_cm2": 135.21269776080032
+    },
+    {
+      "participant_id": "SYN-00042",
+      "speed_kmh": 7.881712588613906,
+      "height_cm": 174.86554623229435,
+      "weight_kg": 57.148095507130456,
+      "age_years": 45.85860635293614,
+      "navicular_ratio": 0.18842393064984503,
+      "foot_size_proxy_cm2": 217.75273238610978,
+      "knee_excursion_deg": 42.347483058970816,
+      "ankle_excursion_deg": 38.66843400313844,
+      "contact_ms": 306.66188059276817,
+      "pressure_peak_N": 968.9233225724751,
+      "effective_area_cm2": 110.73479127772903
+    },
+    {
+      "participant_id": "SYN-00043",
+      "speed_kmh": 8.84810135529584,
+      "height_cm": 176.70148446470859,
+      "weight_kg": 57.96400843132775,
+      "age_years": 41.164519661304766,
+      "navicular_ratio": 0.178725617128305,
+      "foot_size_proxy_cm2": 264.01307175026517,
+      "knee_excursion_deg": 50.902496952262624,
+      "ankle_excursion_deg": 36.82960899569333,
+      "contact_ms": 290.59146647687675,
+      "pressure_peak_N": 998.8523954478031,
+      "effective_area_cm2": 122.74900139744011
+    },
+    {
+      "participant_id": "SYN-00044",
+      "speed_kmh": 8.077668721810255,
+      "height_cm": 172.70006116904943,
+      "weight_kg": 63.66661966163508,
+      "age_years": 60.2895731521323,
+      "navicular_ratio": 0.1945517798634849,
+      "foot_size_proxy_cm2": 213.0358177046264,
+      "knee_excursion_deg": 41.15175656608262,
+      "ankle_excursion_deg": 35.96749718856096,
+      "contact_ms": 298.66366527003095,
+      "pressure_peak_N": 1125.101808763681,
+      "effective_area_cm2": 114.98041237790227
+    },
+    {
+      "participant_id": "SYN-00045",
+      "speed_kmh": 12.731243301450156,
+      "height_cm": 188.36296555491776,
+      "weight_kg": 88.60755767322804,
+      "age_years": 34.992950297771216,
+      "navicular_ratio": 0.11048458809945166,
+      "foot_size_proxy_cm2": 290.993975427426,
+      "knee_excursion_deg": 57.22926230224695,
+      "ankle_excursion_deg": 29.837756214883775,
+      "contact_ms": 230.8811148105212,
+      "pressure_peak_N": 1709.9393407425346,
+      "effective_area_cm2": 130.1523801209709
+    },
+    {
+      "participant_id": "SYN-00046",
+      "speed_kmh": 11.453967628324527,
+      "height_cm": 163.82019442203097,
+      "weight_kg": 72.72170528001041,
+      "age_years": 20.918793788486955,
+      "navicular_ratio": 0.19186685395932318,
+      "foot_size_proxy_cm2": 218.96020437074924,
+      "knee_excursion_deg": 46.60087494436841,
+      "ankle_excursion_deg": 42.53974959148021,
+      "contact_ms": 239.04207442019606,
+      "pressure_peak_N": 1318.9085194261786,
+      "effective_area_cm2": 115.21844082944996
+    },
+    {
+      "participant_id": "SYN-00047",
+      "speed_kmh": 7.134916529178955,
+      "height_cm": 159.3249810873921,
+      "weight_kg": 80.23877744020142,
+      "age_years": 21.7140803993263,
+      "navicular_ratio": 0.1100931486307004,
+      "foot_size_proxy_cm2": 271.87605739764626,
+      "knee_excursion_deg": 36.66837364829703,
+      "ankle_excursion_deg": 35.54255218474119,
+      "contact_ms": 295.50015248136185,
+      "pressure_peak_N": 1211.4371914761616,
+      "effective_area_cm2": 124.29276453760997
+    },
+    {
+      "participant_id": "SYN-00048",
+      "speed_kmh": 10.618372802665952,
+      "height_cm": 177.36499682765688,
+      "weight_kg": 88.09647691888578,
+      "age_years": 33.05201796885104,
+      "navicular_ratio": 0.14541797610495186,
+      "foot_size_proxy_cm2": 211.44395283636166,
+      "knee_excursion_deg": 56.99888596880424,
+      "ankle_excursion_deg": 38.65738969340686,
+      "contact_ms": 261.8317656030735,
+      "pressure_peak_N": 1718.2552272817939,
+      "effective_area_cm2": 111.36239828420918
+    },
+    {
+      "participant_id": "SYN-00049",
+      "speed_kmh": 12.734631826307883,
+      "height_cm": 158.06406388356785,
+      "weight_kg": 75.46751284289248,
+      "age_years": 35.75339699209102,
+      "navicular_ratio": 0.13854832309136692,
+      "foot_size_proxy_cm2": 314.97915770352745,
+      "knee_excursion_deg": 56.61820007484862,
+      "ankle_excursion_deg": 38.35134818185191,
+      "contact_ms": 225.5470615535591,
+      "pressure_peak_N": 1613.440940953546,
+      "effective_area_cm2": 130.9818135906071
+    },
+    {
+      "participant_id": "SYN-00050",
+      "speed_kmh": 9.723319222447865,
+      "height_cm": 179.97772844449605,
+      "weight_kg": 89.71725091811415,
+      "age_years": 60.75102516445238,
+      "navicular_ratio": 0.17371835590902424,
+      "foot_size_proxy_cm2": 246.53505043296005,
+      "knee_excursion_deg": 47.494246713439665,
+      "ankle_excursion_deg": 35.51218863688311,
+      "contact_ms": 253.85991883820552,
+      "pressure_peak_N": 1584.7392669642313,
+      "effective_area_cm2": 128.60866492614204
+    },
+    {
+      "participant_id": "SYN-00051",
+      "speed_kmh": 12.350352218853162,
+      "height_cm": 160.4993811025694,
+      "weight_kg": 72.12662403755841,
+      "age_years": 44.23168255390074,
+      "navicular_ratio": 0.16725699097850866,
+      "foot_size_proxy_cm2": 281.89767201271036,
+      "knee_excursion_deg": 53.18442742491274,
+      "ankle_excursion_deg": 42.52229370046323,
+      "contact_ms": 220.37513720399224,
+      "pressure_peak_N": 1601.1486218203634,
+      "effective_area_cm2": 131.80180624109514
+    },
+    {
+      "participant_id": "SYN-00052",
+      "speed_kmh": 8.300719213789781,
+      "height_cm": 179.23325781503797,
+      "weight_kg": 74.54980859112477,
+      "age_years": 22.773510517288855,
+      "navicular_ratio": 0.1495790290278197,
+      "foot_size_proxy_cm2": 242.7967341862813,
+      "knee_excursion_deg": 42.36583300310036,
+      "ankle_excursion_deg": 37.824901615549926,
+      "contact_ms": 284.2932699340351,
+      "pressure_peak_N": 1261.8644653565646,
+      "effective_area_cm2": 116.33739387737292
+    },
+    {
+      "participant_id": "SYN-00053",
+      "speed_kmh": 9.857268340412944,
+      "height_cm": 181.87941897421024,
+      "weight_kg": 55.31989505180924,
+      "age_years": 28.67232406999262,
+      "navicular_ratio": 0.16249426044611057,
+      "foot_size_proxy_cm2": 244.28998343554028,
+      "knee_excursion_deg": 46.95176656242314,
+      "ankle_excursion_deg": 34.451782553212134,
+      "contact_ms": 260.6821603400233,
+      "pressure_peak_N": 1033.1877851925803,
+      "effective_area_cm2": 111.54359706918157
+    },
+    {
+      "participant_id": "SYN-00054",
+      "speed_kmh": 11.482574265362016,
+      "height_cm": 153.75576917578212,
+      "weight_kg": 49.98699689417994,
+      "age_years": 37.86917315261361,
+      "navicular_ratio": 0.19570949464753068,
+      "foot_size_proxy_cm2": 276.6466221125063,
+      "knee_excursion_deg": 61.31640516695536,
+      "ankle_excursion_deg": 41.123870149637646,
+      "contact_ms": 227.61372492194184,
+      "pressure_peak_N": 1095.117742182066,
+      "effective_area_cm2": 119.84150165778154
+    },
+    {
+      "participant_id": "SYN-00055",
+      "speed_kmh": 9.29422514670463,
+      "height_cm": 152.5811237283909,
+      "weight_kg": 76.90689422406216,
+      "age_years": 43.495845134394344,
+      "navicular_ratio": 0.10167505437846508,
+      "foot_size_proxy_cm2": 223.3566265230935,
+      "knee_excursion_deg": 50.172945478300406,
+      "ankle_excursion_deg": 44.79992468469563,
+      "contact_ms": 272.46671674849637,
+      "pressure_peak_N": 1293.27093830239,
+      "effective_area_cm2": 108.15886848303325
+    },
+    {
+      "participant_id": "SYN-00056",
+      "speed_kmh": 12.93229712405247,
+      "height_cm": 171.0728313746897,
+      "weight_kg": 73.27968415959702,
+      "age_years": 47.13805485331622,
+      "navicular_ratio": 0.12511520483508662,
+      "foot_size_proxy_cm2": 276.2658031405101,
+      "knee_excursion_deg": 57.25763066472371,
+      "ankle_excursion_deg": 41.04702563065301,
+      "contact_ms": 214.9309601796451,
+      "pressure_peak_N": 1649.4327604782477,
+      "effective_area_cm2": 120.99077586645429
+    },
+    {
+      "participant_id": "SYN-00057",
+      "speed_kmh": 11.163040777957614,
+      "height_cm": 182.9579499279918,
+      "weight_kg": 82.0698023999839,
+      "age_years": 54.615149923440946,
+      "navicular_ratio": 0.1749146240985794,
+      "foot_size_proxy_cm2": 274.43525428461345,
+      "knee_excursion_deg": 51.26665648238049,
+      "ankle_excursion_deg": 35.74707806511908,
+      "contact_ms": 261.2028040809678,
+      "pressure_peak_N": 1556.7258725666143,
+      "effective_area_cm2": 130.87443186438173
+    },
+    {
+      "participant_id": "SYN-00058",
+      "speed_kmh": 7.16772346330529,
+      "height_cm": 165.7833662391416,
+      "weight_kg": 51.620030306015,
+      "age_years": 45.06773525397399,
+      "navicular_ratio": 0.107361529419861,
+      "foot_size_proxy_cm2": 239.1549613863687,
+      "knee_excursion_deg": 39.27939962500319,
+      "ankle_excursion_deg": 33.567411645311935,
+      "contact_ms": 295.0207489909517,
+      "pressure_peak_N": 848.3610574846023,
+      "effective_area_cm2": 108.65796646242349
+    },
+    {
+      "participant_id": "SYN-00059",
+      "speed_kmh": 7.756070844613869,
+      "height_cm": 178.17489622871628,
+      "weight_kg": 50.07872145856165,
+      "age_years": 34.76693990447706,
+      "navicular_ratio": 0.14071869843498921,
+      "foot_size_proxy_cm2": 292.8467215828582,
+      "knee_excursion_deg": 41.84017909697915,
+      "ankle_excursion_deg": 29.48617667223442,
+      "contact_ms": 299.1352336143233,
+      "pressure_peak_N": 919.2650223219281,
+      "effective_area_cm2": 123.20833874209555
+    },
+    {
+      "participant_id": "SYN-00060",
+      "speed_kmh": 10.1869930393971,
+      "height_cm": 188.86393803830023,
+      "weight_kg": 70.28021874458692,
+      "age_years": 33.163465270178015,
+      "navicular_ratio": 0.11977929826255876,
+      "foot_size_proxy_cm2": 239.2379094815912,
+      "knee_excursion_deg": 42.70041753983789,
+      "ankle_excursion_deg": 31.080911389904518,
+      "contact_ms": 268.7829575262728,
+      "pressure_peak_N": 1310.1667193345975,
+      "effective_area_cm2": 115.10807382956202
+    }
+  ],
+  "analysis": {
+    "contact_ms": {
+      "unit": "ms",
+      "cross_validation": {
+        "mean_mae": 21.834424207603767,
+        "mean_rmse": 26.136278242392,
+        "baseline_mae": 8.01939488152905,
+        "baseline_rmse": 9.67856758205976,
+        "augmented_mae": 7.711814567640675,
+        "augmented_rmse": 9.241885699440306,
+        "delta_mae_baseline_minus_augmented": 0.3075803138883755
+      },
+      "delta_mae_bootstrap_ci95": [
+        -0.6092909749140216,
+        1.4137322948091888
+      ],
+      "coefficients": [
+        {
+          "term": "intercept",
+          "estimate": 5.094587967259053,
+          "hc3_ci95": [
+            4.311011286731489,
+            5.878164647786617
+          ],
+          "bootstrap_ci95": [
+            4.469850144532148,
+            5.749708156261703
+          ]
+        },
+        {
+          "term": "log_speed_kmh",
+          "estimate": -0.47502958033765774,
+          "hc3_ci95": [
+            -0.5427593485381186,
+            -0.4072998121371969
+          ],
+          "bootstrap_ci95": [
+            -0.5483102751368673,
+            -0.4314893055538424
+          ]
+        },
+        {
+          "term": "log_height_cm",
+          "estimate": 0.3110084301330446,
+          "hc3_ci95": [
+            0.1573737342371032,
+            0.46464312602898594
+          ],
+          "bootstrap_ci95": [
+            0.18111762612587404,
+            0.4510900697828324
+          ]
+        },
+        {
+          "term": "knee_excursion_deg_per10",
+          "estimate": -0.022347233309236384,
+          "hc3_ci95": [
+            -0.04148440306072061,
+            -0.0032100635577521526
+          ],
+          "bootstrap_ci95": [
+            -0.043873337869647075,
+            0.00044749696030838124
+          ]
+        },
+        {
+          "term": "ankle_excursion_deg_per10",
+          "estimate": 0.019071970112054134,
+          "hc3_ci95": [
+            -0.00045266399866502813,
+            0.03859660422277329
+          ],
+          "bootstrap_ci95": [
+            0.0064987970584998896,
+            0.03411644896862337
+          ]
+        }
+      ],
+      "predictions": [
+        {
+          "participant_id": "SYN-00001",
+          "observed": 266.0270938086994,
+          "baseline_prediction": 266.33119078541125,
+          "augmented_prediction": 265.47746799883134
+        },
+        {
+          "participant_id": "SYN-00002",
+          "observed": 292.1900181354115,
+          "baseline_prediction": 290.65392892118456,
+          "augmented_prediction": 280.92640842015777
+        },
+        {
+          "participant_id": "SYN-00003",
+          "observed": 239.87385460152836,
+          "baseline_prediction": 242.96514190056124,
+          "augmented_prediction": 241.87619073888695
+        },
+        {
+          "participant_id": "SYN-00004",
+          "observed": 292.62204384698003,
+          "baseline_prediction": 305.26499169553085,
+          "augmented_prediction": 308.6934476575509
+        },
+        {
+          "participant_id": "SYN-00005",
+          "observed": 269.588739844212,
+          "baseline_prediction": 267.7360716042344,
+          "augmented_prediction": 271.357985633688
+        },
+        {
+          "participant_id": "SYN-00006",
+          "observed": 263.2252851470372,
+          "baseline_prediction": 251.24246363188774,
+          "augmented_prediction": 255.33026325970872
+        },
+        {
+          "participant_id": "SYN-00007",
+          "observed": 262.64273430969854,
+          "baseline_prediction": 266.32500323690147,
+          "augmented_prediction": 263.81760097597333
+        },
+        {
+          "participant_id": "SYN-00008",
+          "observed": 279.75707386780954,
+          "baseline_prediction": 269.19702001214307,
+          "augmented_prediction": 267.193502169046
+        },
+        {
+          "participant_id": "SYN-00009",
+          "observed": 245.46253857196868,
+          "baseline_prediction": 239.7405675952974,
+          "augmented_prediction": 244.98914608239394
+        },
+        {
+          "participant_id": "SYN-00010",
+          "observed": 236.96159174663705,
+          "baseline_prediction": 232.68584468272786,
+          "augmented_prediction": 228.3756900009348
+        },
+        {
+          "participant_id": "SYN-00011",
+          "observed": 225.67141479737646,
+          "baseline_prediction": 232.3212164725793,
+          "augmented_prediction": 233.42167341709748
+        },
+        {
+          "participant_id": "SYN-00012",
+          "observed": 276.8651706795959,
+          "baseline_prediction": 268.4602791795411,
+          "augmented_prediction": 269.49789738751673
+        },
+        {
+          "participant_id": "SYN-00013",
+          "observed": 236.52632633526903,
+          "baseline_prediction": 248.436995203632,
+          "augmented_prediction": 244.53224037614356
+        },
+        {
+          "participant_id": "SYN-00014",
+          "observed": 315.65834490082545,
+          "baseline_prediction": 302.83922760274675,
+          "augmented_prediction": 303.8270898648451
+        },
+        {
+          "participant_id": "SYN-00015",
+          "observed": 289.02340707662086,
+          "baseline_prediction": 284.58082530111227,
+          "augmented_prediction": 284.99303196679233
+        },
+        {
+          "participant_id": "SYN-00016",
+          "observed": 235.4143731480487,
+          "baseline_prediction": 237.1219850252605,
+          "augmented_prediction": 240.35026388464746
+        },
+        {
+          "participant_id": "SYN-00017",
+          "observed": 275.9941811026221,
+          "baseline_prediction": 284.61237196685096,
+          "augmented_prediction": 283.87197180095706
+        },
+        {
+          "participant_id": "SYN-00018",
+          "observed": 249.0361934335991,
+          "baseline_prediction": 234.48163726268533,
+          "augmented_prediction": 238.6599093451233
+        },
+        {
+          "participant_id": "SYN-00019",
+          "observed": 295.3498648486213,
+          "baseline_prediction": 287.859391033426,
+          "augmented_prediction": 287.3455737849696
+        },
+        {
+          "participant_id": "SYN-00020",
+          "observed": 261.64469221096584,
+          "baseline_prediction": 268.1987513139374,
+          "augmented_prediction": 273.3486262221484
+        },
+        {
+          "participant_id": "SYN-00021",
+          "observed": 231.2844084202305,
+          "baseline_prediction": 229.36609325835056,
+          "augmented_prediction": 231.46244493832572
+        },
+        {
+          "participant_id": "SYN-00022",
+          "observed": 251.11815282821956,
+          "baseline_prediction": 254.04618179672013,
+          "augmented_prediction": 246.37357390861368
+        },
+        {
+          "participant_id": "SYN-00023",
+          "observed": 268.66052826322834,
+          "baseline_prediction": 262.8535893398677,
+          "augmented_prediction": 269.3231587164937
+        },
+        {
+          "participant_id": "SYN-00024",
+          "observed": 258.0519929603922,
+          "baseline_prediction": 256.78703274656095,
+          "augmented_prediction": 258.3876574662648
+        },
+        {
+          "participant_id": "SYN-00025",
+          "observed": 292.48198912038265,
+          "baseline_prediction": 301.2842703321347,
+          "augmented_prediction": 297.6386177015591
+        },
+        {
+          "participant_id": "SYN-00026",
+          "observed": 251.37681207993563,
+          "baseline_prediction": 258.26810706070347,
+          "augmented_prediction": 262.95207421492904
+        },
+        {
+          "participant_id": "SYN-00027",
+          "observed": 292.05284154146267,
+          "baseline_prediction": 297.6587946149792,
+          "augmented_prediction": 297.4383538953706
+        },
+        {
+          "participant_id": "SYN-00028",
+          "observed": 210.10112108666263,
+          "baseline_prediction": 232.82773190520888,
+          "augmented_prediction": 232.90682645358498
+        },
+        {
+          "participant_id": "SYN-00029",
+          "observed": 268.5404188840992,
+          "baseline_prediction": 259.41695345133064,
+          "augmented_prediction": 258.8247886916075
+        },
+        {
+          "participant_id": "SYN-00030",
+          "observed": 258.3511388715977,
+          "baseline_prediction": 252.11079479941452,
+          "augmented_prediction": 252.93526075682837
+        },
+        {
+          "participant_id": "SYN-00031",
+          "observed": 249.50509774797257,
+          "baseline_prediction": 242.45559117393464,
+          "augmented_prediction": 242.82817335633263
+        },
+        {
+          "participant_id": "SYN-00032",
+          "observed": 259.2425883804217,
+          "baseline_prediction": 250.22513355899275,
+          "augmented_prediction": 253.66420743504906
+        },
+        {
+          "participant_id": "SYN-00033",
+          "observed": 304.64404244620573,
+          "baseline_prediction": 305.9585592548585,
+          "augmented_prediction": 312.4228598083909
+        },
+        {
+          "participant_id": "SYN-00034",
+          "observed": 253.15100414527524,
+          "baseline_prediction": 247.62320476684658,
+          "augmented_prediction": 250.03443033068206
+        },
+        {
+          "participant_id": "SYN-00035",
+          "observed": 290.18973659408164,
+          "baseline_prediction": 274.40749401241396,
+          "augmented_prediction": 282.69759997598413
+        },
+        {
+          "participant_id": "SYN-00036",
+          "observed": 248.76522586297384,
+          "baseline_prediction": 276.2617977189877,
+          "augmented_prediction": 270.93838390584636
+        },
+        {
+          "participant_id": "SYN-00037",
+          "observed": 275.3781048485257,
+          "baseline_prediction": 255.777789470598,
+          "augmented_prediction": 258.7233489669658
+        },
+        {
+          "participant_id": "SYN-00038",
+          "observed": 243.94445142715418,
+          "baseline_prediction": 238.83023263792012,
+          "augmented_prediction": 240.3173150682404
+        },
+        {
+          "participant_id": "SYN-00039",
+          "observed": 228.24155096345893,
+          "baseline_prediction": 225.4881806536466,
+          "augmented_prediction": 220.1054055801569
+        },
+        {
+          "participant_id": "SYN-00040",
+          "observed": 293.40808574049674,
+          "baseline_prediction": 280.95142242887556,
+          "augmented_prediction": 282.7544980019688
+        },
+        {
+          "participant_id": "SYN-00041",
+          "observed": 279.2831739480666,
+          "baseline_prediction": 290.17324528924036,
+          "augmented_prediction": 282.25497135376844
+        },
+        {
+          "participant_id": "SYN-00042",
+          "observed": 306.66188059276817,
+          "baseline_prediction": 297.01487419853805,
+          "augmented_prediction": 298.2140856450455
+        },
+        {
+          "participant_id": "SYN-00043",
+          "observed": 290.59146647687675,
+          "baseline_prediction": 281.0167393979046,
+          "augmented_prediction": 276.46778160692395
+        },
+        {
+          "participant_id": "SYN-00044",
+          "observed": 298.66366527003095,
+          "baseline_prediction": 292.3419342805642,
+          "augmented_prediction": 293.174926319806
+        },
+        {
+          "participant_id": "SYN-00045",
+          "observed": 230.8811148105212,
+          "baseline_prediction": 238.8947951907383,
+          "augmented_prediction": 231.67981906394715
+        },
+        {
+          "participant_id": "SYN-00046",
+          "observed": 239.04207442019606,
+          "baseline_prediction": 240.5799176634815,
+          "augmented_prediction": 244.97302461202366
+        },
+        {
+          "participant_id": "SYN-00047",
+          "observed": 295.50015248136185,
+          "baseline_prediction": 304.5400874901122,
+          "augmented_prediction": 307.367415219675
+        },
+        {
+          "participant_id": "SYN-00048",
+          "observed": 261.8317656030735,
+          "baseline_prediction": 256.38178336395663,
+          "augmented_prediction": 251.32208745677022
+        },
+        {
+          "participant_id": "SYN-00049",
+          "observed": 225.5470615535591,
+          "baseline_prediction": 225.15916151414314,
+          "augmented_prediction": 222.84923495914086
+        },
+        {
+          "participant_id": "SYN-00050",
+          "observed": 253.85991883820552,
+          "baseline_prediction": 270.1064564072841,
+          "augmented_prediction": 268.5696479130611
+        },
+        {
+          "participant_id": "SYN-00051",
+          "observed": 220.37513720399224,
+          "baseline_prediction": 230.56474739981277,
+          "augmented_prediction": 231.84811622297707
+        },
+        {
+          "participant_id": "SYN-00052",
+          "observed": 284.2932699340351,
+          "baseline_prediction": 292.3951030578902,
+          "augmented_prediction": 293.7440746049253
+        },
+        {
+          "participant_id": "SYN-00053",
+          "observed": 260.6821603400233,
+          "baseline_prediction": 268.92422110493345,
+          "augmented_prediction": 267.2724479639957
+        },
+        {
+          "participant_id": "SYN-00054",
+          "observed": 227.61372492194184,
+          "baseline_prediction": 236.0637834689456,
+          "augmented_prediction": 231.6567759801969
+        },
+        {
+          "participant_id": "SYN-00055",
+          "observed": 272.46671674849637,
+          "baseline_prediction": 260.91648057802877,
+          "augmented_prediction": 262.1742888471592
+        },
+        {
+          "participant_id": "SYN-00056",
+          "observed": 214.9309601796451,
+          "baseline_prediction": 229.99904754855066,
+          "augmented_prediction": 228.66489792125626
+        },
+        {
+          "participant_id": "SYN-00057",
+          "observed": 261.2028040809678,
+          "baseline_prediction": 252.16793134931598,
+          "augmented_prediction": 249.77710747479827
+        },
+        {
+          "participant_id": "SYN-00058",
+          "observed": 295.0207489909517,
+          "baseline_prediction": 307.90751809215544,
+          "augmented_prediction": 307.38246534234247
+        },
+        {
+          "participant_id": "SYN-00059",
+          "observed": 299.1352336143233,
+          "baseline_prediction": 301.93315504306355,
+          "augmented_prediction": 297.72582539442453
+        },
+        {
+          "participant_id": "SYN-00060",
+          "observed": 268.7829575262728,
+          "baseline_prediction": 267.27288588155596,
+          "augmented_prediction": 266.4959459581515
+        }
+      ]
+    },
+    "pressure_peak_N": {
+      "unit": "N",
+      "cross_validation": {
+        "mean_mae": 230.0672655159609,
+        "mean_rmse": 266.5488941165416,
+        "baseline_mae": 49.78726579683086,
+        "baseline_rmse": 66.53445016668577,
+        "augmented_mae": 50.726143095926865,
+        "augmented_rmse": 68.1597799175122,
+        "delta_mae_baseline_minus_augmented": -0.9388772990960064
+      },
+      "delta_mae_bootstrap_ci95": [
+        -5.897986643831394,
+        2.7935520199947135
+      ],
+      "coefficients": [
+        {
+          "term": "intercept",
+          "estimate": 2.6027550051798833,
+          "hc3_ci95": [
+            2.2982998839240993,
+            2.9072101264356673
+          ],
+          "bootstrap_ci95": [
+            2.451459565593572,
+            2.86625073223904
+          ]
+        },
+        {
+          "term": "log_speed_kmh",
+          "estimate": 0.5434476598070658,
+          "hc3_ci95": [
+            0.44921475423574986,
+            0.6376805653783817
+          ],
+          "bootstrap_ci95": [
+            0.4501905012297739,
+            0.6463884368258042
+          ]
+        },
+        {
+          "term": "log_weight_kg",
+          "estimate": 0.776149993190424,
+          "hc3_ci95": [
+            0.7030577171943186,
+            0.8492422691865293
+          ],
+          "bootstrap_ci95": [
+            0.703064912243294,
+            0.8340064173781612
+          ]
+        },
+        {
+          "term": "knee_excursion_deg_per10",
+          "estimate": 0.014975451665920248,
+          "hc3_ci95": [
+            -0.0063205765607479095,
+            0.03627147989258841
+          ],
+          "bootstrap_ci95": [
+            -0.009521751795055593,
+            0.03398492189242281
+          ]
+        },
+        {
+          "term": "ankle_excursion_deg_per10",
+          "estimate": -0.01088668206232358,
+          "hc3_ci95": [
+            -0.048014789313471785,
+            0.02624142518882463
+          ],
+          "bootstrap_ci95": [
+            -0.04812555438925529,
+            0.0184307581796403
+          ]
+        }
+      ],
+      "predictions": [
+        {
+          "participant_id": "SYN-00001",
+          "observed": 1161.0478095296453,
+          "baseline_prediction": 1103.8114487133128,
+          "augmented_prediction": 1103.2285342503626
+        },
+        {
+          "participant_id": "SYN-00002",
+          "observed": 1313.5028794419954,
+          "baseline_prediction": 1261.7361013828315,
+          "augmented_prediction": 1287.2771153860406
+        },
+        {
+          "participant_id": "SYN-00003",
+          "observed": 1593.3116925999648,
+          "baseline_prediction": 1496.110613612799,
+          "augmented_prediction": 1497.9031289038996
+        },
+        {
+          "participant_id": "SYN-00004",
+          "observed": 1134.8300460102762,
+          "baseline_prediction": 1214.2290180753491,
+          "augmented_prediction": 1209.9818960429727
+        },
+        {
+          "participant_id": "SYN-00005",
+          "observed": 1538.2969669590072,
+          "baseline_prediction": 1611.26449367606,
+          "augmented_prediction": 1600.385617077321
+        },
+        {
+          "participant_id": "SYN-00006",
+          "observed": 1458.9788513117837,
+          "baseline_prediction": 1495.496339002145,
+          "augmented_prediction": 1478.9548633518139
+        },
+        {
+          "participant_id": "SYN-00007",
+          "observed": 1073.4802240702852,
+          "baseline_prediction": 1054.927349565932,
+          "augmented_prediction": 1058.6548436557641
+        },
+        {
+          "participant_id": "SYN-00008",
+          "observed": 1341.4753497355625,
+          "baseline_prediction": 1328.8941229148452,
+          "augmented_prediction": 1335.6443475532394
+        },
+        {
+          "participant_id": "SYN-00009",
+          "observed": 1528.8831542527032,
+          "baseline_prediction": 1517.3083615872536,
+          "augmented_prediction": 1495.7505739580636
+        },
+        {
+          "participant_id": "SYN-00010",
+          "observed": 1832.510953262426,
+          "baseline_prediction": 1641.7817541651352,
+          "augmented_prediction": 1653.6042740477035
+        },
+        {
+          "participant_id": "SYN-00011",
+          "observed": 1602.8619552605903,
+          "baseline_prediction": 1602.8766578986335,
+          "augmented_prediction": 1600.754567090416
+        },
+        {
+          "participant_id": "SYN-00012",
+          "observed": 1073.3091885094254,
+          "baseline_prediction": 1121.2900110979356,
+          "augmented_prediction": 1117.7537312381544
+        },
+        {
+          "participant_id": "SYN-00013",
+          "observed": 1696.9773716122284,
+          "baseline_prediction": 1640.994142944517,
+          "augmented_prediction": 1660.3363621663875
+        },
+        {
+          "participant_id": "SYN-00014",
+          "observed": 1015.6136140646678,
+          "baseline_prediction": 982.2258681133673,
+          "augmented_prediction": 978.6437773388893
+        },
+        {
+          "participant_id": "SYN-00015",
+          "observed": 1315.6730235834823,
+          "baseline_prediction": 1281.7649304514796,
+          "augmented_prediction": 1282.660801175552
+        },
+        {
+          "participant_id": "SYN-00016",
+          "observed": 1725.5188888259897,
+          "baseline_prediction": 1795.882795536451,
+          "augmented_prediction": 1783.4854847109862
+        },
+        {
+          "participant_id": "SYN-00017",
+          "observed": 1446.8592147747995,
+          "baseline_prediction": 1425.951694778557,
+          "augmented_prediction": 1432.4520676018587
+        },
+        {
+          "participant_id": "SYN-00018",
+          "observed": 1579.7237301462214,
+          "baseline_prediction": 1636.728491242434,
+          "augmented_prediction": 1618.1918328567242
+        },
+        {
+          "participant_id": "SYN-00019",
+          "observed": 1241.6372509517996,
+          "baseline_prediction": 1217.6749063191423,
+          "augmented_prediction": 1220.6908377721104
+        },
+        {
+          "participant_id": "SYN-00020",
+          "observed": 1347.5308126228783,
+          "baseline_prediction": 1442.9756936406184,
+          "augmented_prediction": 1432.1738547875143
+        },
+        {
+          "participant_id": "SYN-00021",
+          "observed": 1342.4896164692314,
+          "baseline_prediction": 1519.521352612749,
+          "augmented_prediction": 1516.8581386377468
+        },
+        {
+          "participant_id": "SYN-00022",
+          "observed": 1239.6696476770835,
+          "baseline_prediction": 1226.31445550499,
+          "augmented_prediction": 1247.9322401280858
+        },
+        {
+          "participant_id": "SYN-00023",
+          "observed": 1153.9981002498027,
+          "baseline_prediction": 1168.0945744054295,
+          "augmented_prediction": 1142.2549891565532
+        },
+        {
+          "participant_id": "SYN-00024",
+          "observed": 1123.5514363161194,
+          "baseline_prediction": 1068.8263174953677,
+          "augmented_prediction": 1061.0085107382424
+        },
+        {
+          "participant_id": "SYN-00025",
+          "observed": 1220.1970586289117,
+          "baseline_prediction": 1199.95919595811,
+          "augmented_prediction": 1211.4648363613805
+        },
+        {
+          "participant_id": "SYN-00026",
+          "observed": 1118.8297658290578,
+          "baseline_prediction": 1049.5484441686572,
+          "augmented_prediction": 1032.0990522007148
+        },
+        {
+          "participant_id": "SYN-00027",
+          "observed": 1026.746134188067,
+          "baseline_prediction": 1060.47665621751,
+          "augmented_prediction": 1061.6984081559528
+        },
+        {
+          "participant_id": "SYN-00028",
+          "observed": 1597.0074767066276,
+          "baseline_prediction": 1618.0857565482095,
+          "augmented_prediction": 1621.9744945793916
+        },
+        {
+          "participant_id": "SYN-00029",
+          "observed": 1431.6647401051534,
+          "baseline_prediction": 1416.6070493991147,
+          "augmented_prediction": 1415.7731729714963
+        },
+        {
+          "participant_id": "SYN-00030",
+          "observed": 1727.9927745238545,
+          "baseline_prediction": 1644.212528598144,
+          "augmented_prediction": 1637.4663109878225
+        },
+        {
+          "participant_id": "SYN-00031",
+          "observed": 1932.8270747389502,
+          "baseline_prediction": 1738.8697291660883,
+          "augmented_prediction": 1722.792177771017
+        },
+        {
+          "participant_id": "SYN-00032",
+          "observed": 1686.0270973730371,
+          "baseline_prediction": 1677.9278789326058,
+          "augmented_prediction": 1665.00657420353
+        },
+        {
+          "participant_id": "SYN-00033",
+          "observed": 1380.534606091108,
+          "baseline_prediction": 1338.7747871138076,
+          "augmented_prediction": 1324.2070760834897
+        },
+        {
+          "participant_id": "SYN-00034",
+          "observed": 1555.922615607084,
+          "baseline_prediction": 1569.6384246776145,
+          "augmented_prediction": 1560.6173944741734
+        },
+        {
+          "participant_id": "SYN-00035",
+          "observed": 1515.9891047696349,
+          "baseline_prediction": 1514.868471435592,
+          "augmented_prediction": 1480.8651153903922
+        },
+        {
+          "participant_id": "SYN-00036",
+          "observed": 971.9511598275332,
+          "baseline_prediction": 990.6423780863794,
+          "augmented_prediction": 1002.1546899626084
+        },
+        {
+          "participant_id": "SYN-00037",
+          "observed": 1415.2428666411924,
+          "baseline_prediction": 1434.9767662798715,
+          "augmented_prediction": 1424.453183543793
+        },
+        {
+          "participant_id": "SYN-00038",
+          "observed": 1522.9950112059958,
+          "baseline_prediction": 1591.358547053219,
+          "augmented_prediction": 1586.9955189389723
+        },
+        {
+          "participant_id": "SYN-00039",
+          "observed": 1790.8829484663809,
+          "baseline_prediction": 1816.1897839477408,
+          "augmented_prediction": 1849.6433579697705
+        },
+        {
+          "participant_id": "SYN-00040",
+          "observed": 1185.9870675759078,
+          "baseline_prediction": 1249.6130617337503,
+          "augmented_prediction": 1245.3067272756116
+        },
+        {
+          "participant_id": "SYN-00041",
+          "observed": 1092.9891350749265,
+          "baseline_prediction": 1117.0413811323735,
+          "augmented_prediction": 1140.0710688292493
+        },
+        {
+          "participant_id": "SYN-00042",
+          "observed": 968.9233225724751,
+          "baseline_prediction": 984.5986414873165,
+          "augmented_prediction": 980.2010101853011
+        },
+        {
+          "participant_id": "SYN-00043",
+          "observed": 998.8523954478031,
+          "baseline_prediction": 1065.4156310867288,
+          "augmented_prediction": 1075.098281580609
+        },
+        {
+          "participant_id": "SYN-00044",
+          "observed": 1125.101808763681,
+          "baseline_prediction": 1082.0306295707878,
+          "augmented_prediction": 1078.6533599966524
+        },
+        {
+          "participant_id": "SYN-00045",
+          "observed": 1709.9393407425346,
+          "baseline_prediction": 1818.292063740974,
+          "augmented_prediction": 1879.6089907936248
+        },
+        {
+          "participant_id": "SYN-00046",
+          "observed": 1318.9085194261786,
+          "baseline_prediction": 1469.8781130488512,
+          "augmented_prediction": 1457.5987618657134
+        },
+        {
+          "participant_id": "SYN-00047",
+          "observed": 1211.4371914761616,
+          "baseline_prediction": 1204.7738368561002,
+          "augmented_prediction": 1200.1948432887225
+        },
+        {
+          "participant_id": "SYN-00048",
+          "observed": 1718.2552272817939,
+          "baseline_prediction": 1622.2268005473925,
+          "augmented_prediction": 1640.7711368222435
+        },
+        {
+          "participant_id": "SYN-00049",
+          "observed": 1613.440940953546,
+          "baseline_prediction": 1601.5293955083062,
+          "augmented_prediction": 1611.867189328911
+        },
+        {
+          "participant_id": "SYN-00050",
+          "observed": 1584.7392669642313,
+          "baseline_prediction": 1566.8591325616735,
+          "augmented_prediction": 1574.824295717171
+        },
+        {
+          "participant_id": "SYN-00051",
+          "observed": 1601.1486218203634,
+          "baseline_prediction": 1517.0024519582596,
+          "augmented_prediction": 1511.6355188247237
+        },
+        {
+          "participant_id": "SYN-00052",
+          "observed": 1261.8644653565646,
+          "baseline_prediction": 1241.688434945883,
+          "augmented_prediction": 1238.5378921776655
+        },
+        {
+          "participant_id": "SYN-00053",
+          "observed": 1033.1877851925803,
+          "baseline_prediction": 1093.8993697175533,
+          "augmented_prediction": 1095.0174908809472
+        },
+        {
+          "participant_id": "SYN-00054",
+          "observed": 1095.117742182066,
+          "baseline_prediction": 1101.6599721935322,
+          "augmented_prediction": 1114.623359317802
+        },
+        {
+          "participant_id": "SYN-00055",
+          "observed": 1293.27093830239,
+          "baseline_prediction": 1358.915644204316,
+          "augmented_prediction": 1361.3696643267774
+        },
+        {
+          "participant_id": "SYN-00056",
+          "observed": 1649.4327604782477,
+          "baseline_prediction": 1576.3639714728095,
+          "augmented_prediction": 1581.790777587471
+        },
+        {
+          "participant_id": "SYN-00057",
+          "observed": 1556.7258725666143,
+          "baseline_prediction": 1585.3635091430963,
+          "augmented_prediction": 1595.0928241680997
+        },
+        {
+          "participant_id": "SYN-00058",
+          "observed": 848.3610574846023,
+          "baseline_prediction": 863.2418142388541,
+          "augmented_prediction": 861.741051420844
+        },
+        {
+          "participant_id": "SYN-00059",
+          "observed": 919.2650223219281,
+          "baseline_prediction": 876.6175770854305,
+          "augmented_prediction": 879.4388983720667
+        },
+        {
+          "participant_id": "SYN-00060",
+          "observed": 1310.1667193345975,
+          "baseline_prediction": 1335.5465044742232,
+          "augmented_prediction": 1336.2319074307607
+        }
+      ]
+    }
+  },
+  "disclaimer": "Independent equation-generated demonstration. No real participant data or empirical research findings."
+}

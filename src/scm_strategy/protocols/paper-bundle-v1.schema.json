@@ -1,0 +1,1096 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "metadata",
+    "primary",
+    "extension",
+    "sensitivities",
+    "pressure_repeats"
+  ],
+  "properties": {
+    "metadata": {
+      "type": "object",
+      "required": [
+        "schema_version",
+        "protocol_id",
+        "units"
+      ],
+      "properties": {
+        "schema_version": {
+          "const": "scm-strategy.paper-bundle/1"
+        },
+        "protocol_id": {
+          "const": "scm-strategy-pressure/1.0.0"
+        },
+        "dataset_kind": {
+          "enum": [
+            "private_empirical",
+            "synthetic"
+          ],
+          "default": "private_empirical"
+        },
+        "units": {
+          "type": "object",
+          "required": [
+            "speed_kmh",
+            "height_cm",
+            "weight_kg",
+            "age_years",
+            "navicular_ratio",
+            "foot_size_proxy_cm2",
+            "knee_excursion_deg",
+            "ankle_excursion_deg",
+            "contact_ms",
+            "pressure_peak_N",
+            "effective_area_cm2"
+          ],
+          "properties": {
+            "speed_kmh": {
+              "const": "km/h"
+            },
+            "height_cm": {
+              "const": "cm"
+            },
+            "weight_kg": {
+              "const": "kg"
+            },
+            "age_years": {
+              "const": "year"
+            },
+            "navicular_ratio": {
+              "const": "1"
+            },
+            "foot_size_proxy_cm2": {
+              "const": "cm^2"
+            },
+            "knee_excursion_deg": {
+              "const": "degree"
+            },
+            "ankle_excursion_deg": {
+              "const": "degree"
+            },
+            "contact_ms": {
+              "const": "ms"
+            },
+            "pressure_peak_N": {
+              "const": "N"
+            },
+            "effective_area_cm2": {
+              "const": "cm^2"
+            },
+            "bmi": {
+              "const": "kg/m^2"
+            },
+            "body_fat_pct": {
+              "const": "%"
+            },
+            "navicular_height_L_mm": {
+              "const": "mm"
+            },
+            "navicular_height_R_mm": {
+              "const": "mm"
+            },
+            "subject_median_speed_kmh": {
+              "const": "km/h"
+            }
+          },
+          "additionalProperties": false
+        },
+        "generator": {
+          "type": "object"
+        },
+        "description": {
+          "type": "string"
+        },
+        "synthetic_notice": {
+          "type": "string"
+        },
+        "sensitivity_notice": {
+          "type": "string"
+        },
+        "cohort_profile_scope": {
+          "type": "string"
+        },
+        "cohort_counts": {
+          "type": "object",
+          "properties": {
+            "conservative_pair_count": {
+              "type": "integer",
+              "minimum": 0
+            },
+            "eligible_nonfirst_backward_trials": {
+              "type": "integer",
+              "minimum": 0
+            },
+            "eligible_pressure_trials": {
+              "type": "integer",
+              "minimum": 0
+            },
+            "pressure_excluded_trials": {
+              "type": "integer",
+              "minimum": 0
+            },
+            "source_participants": {
+              "type": "integer",
+              "minimum": 0
+            },
+            "source_pressure_trials": {
+              "type": "integer",
+              "minimum": 0
+            }
+          },
+          "additionalProperties": false
+        },
+        "quality_counts": {
+          "type": "object",
+          "properties": {
+            "automatic_exclusions": {
+              "type": "integer",
+              "minimum": 0
+            },
+            "heuristic_review_participants": {
+              "type": "integer",
+              "minimum": 0
+            },
+            "min_complete_events_per_side": {
+              "type": "integer",
+              "minimum": 0
+            },
+            "mot_channel_series_screened": {
+              "type": "integer",
+              "minimum": 0
+            },
+            "mot_participants_screened": {
+              "type": "integer",
+              "minimum": 0
+            },
+            "primary_PASS_count": {
+              "type": "integer",
+              "minimum": 0
+            },
+            "primary_WARNING_count": {
+              "type": "integer",
+              "minimum": 0
+            },
+            "source_exclusions": {
+              "type": "integer",
+              "minimum": 0
+            }
+          },
+          "additionalProperties": false
+        }
+      },
+      "additionalProperties": false
+    },
+    "primary": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "participant_id",
+          "trial_id",
+          "trial_index",
+          "direction",
+          "available",
+          "exclusion_reason",
+          "speed_kmh",
+          "height_cm",
+          "weight_kg",
+          "age_years",
+          "navicular_ratio",
+          "foot_size_proxy_cm2",
+          "knee_excursion_deg",
+          "ankle_excursion_deg",
+          "contact_ms",
+          "pressure_peak_N",
+          "effective_area_cm2",
+          "qc_status"
+        ],
+        "properties": {
+          "speed_kmh": {
+            "type": [
+              "number",
+              "null"
+            ],
+            "exclusiveMinimum": 0
+          },
+          "height_cm": {
+            "type": [
+              "number",
+              "null"
+            ],
+            "exclusiveMinimum": 0
+          },
+          "weight_kg": {
+            "type": [
+              "number",
+              "null"
+            ],
+            "exclusiveMinimum": 0
+          },
+          "age_years": {
+            "type": [
+              "number",
+              "null"
+            ],
+            "exclusiveMinimum": 0
+          },
+          "navicular_ratio": {
+            "type": [
+              "number",
+              "null"
+            ],
+            "exclusiveMinimum": 0
+          },
+          "foot_size_proxy_cm2": {
+            "type": [
+              "number",
+              "null"
+            ],
+            "exclusiveMinimum": 0
+          },
+          "knee_excursion_deg": {
+            "type": [
+              "number",
+              "null"
+            ],
+            "exclusiveMinimum": 0
+          },
+          "ankle_excursion_deg": {
+            "type": [
+              "number",
+              "null"
+            ],
+            "exclusiveMinimum": 0
+          },
+          "contact_ms": {
+            "type": [
+              "number",
+              "null"
+            ],
+            "exclusiveMinimum": 0
+          },
+          "pressure_peak_N": {
+            "type": [
+              "number",
+              "null"
+            ],
+            "exclusiveMinimum": 0
+          },
+          "effective_area_cm2": {
+            "type": [
+              "number",
+              "null"
+            ],
+            "exclusiveMinimum": 0
+          },
+          "participant_id": {
+            "type": "string",
+            "minLength": 1
+          },
+          "trial_id": {
+            "type": "string",
+            "minLength": 1
+          },
+          "trial_index": {
+            "type": "integer",
+            "minimum": 1
+          },
+          "direction": {
+            "const": "backward"
+          },
+          "available": {
+            "type": "boolean"
+          },
+          "exclusion_reason": {
+            "type": "string"
+          },
+          "qc_status": {
+            "enum": [
+              "FAIL-MINOR",
+              "FAIL-MODERATE",
+              "FAIL-SEVERE",
+              "NOT_AVAILABLE",
+              "PASS",
+              "WARNING"
+            ]
+          }
+        },
+        "allOf": [
+          {
+            "if": {
+              "properties": {
+                "available": {
+                  "const": false
+                }
+              }
+            },
+            "then": {
+              "properties": {
+                "exclusion_reason": {
+                  "type": "string",
+                  "minLength": 1
+                }
+              }
+            }
+          },
+          {
+            "if": {
+              "properties": {
+                "available": {
+                  "const": true
+                }
+              }
+            },
+            "then": {
+              "properties": {
+                "knee_excursion_deg": {
+                  "type": "number",
+                  "exclusiveMinimum": 0
+                },
+                "ankle_excursion_deg": {
+                  "type": "number",
+                  "exclusiveMinimum": 0
+                },
+                "qc_status": {
+                  "enum": [
+                    "PASS",
+                    "WARNING"
+                  ]
+                }
+              }
+            }
+          }
+        ]
+      }
+    },
+    "extension": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "participant_id",
+          "trial_id",
+          "trial_index",
+          "direction",
+          "available",
+          "exclusion_reason",
+          "speed_kmh",
+          "height_cm",
+          "weight_kg",
+          "age_years",
+          "navicular_ratio",
+          "foot_size_proxy_cm2",
+          "contact_ms",
+          "pressure_peak_N",
+          "effective_area_cm2"
+        ],
+        "properties": {
+          "speed_kmh": {
+            "type": [
+              "number",
+              "null"
+            ],
+            "exclusiveMinimum": 0
+          },
+          "height_cm": {
+            "type": [
+              "number",
+              "null"
+            ],
+            "exclusiveMinimum": 0
+          },
+          "weight_kg": {
+            "type": [
+              "number",
+              "null"
+            ],
+            "exclusiveMinimum": 0
+          },
+          "age_years": {
+            "type": [
+              "number",
+              "null"
+            ],
+            "exclusiveMinimum": 0
+          },
+          "navicular_ratio": {
+            "type": [
+              "number",
+              "null"
+            ],
+            "exclusiveMinimum": 0
+          },
+          "foot_size_proxy_cm2": {
+            "type": [
+              "number",
+              "null"
+            ],
+            "exclusiveMinimum": 0
+          },
+          "contact_ms": {
+            "type": [
+              "number",
+              "null"
+            ],
+            "exclusiveMinimum": 0
+          },
+          "pressure_peak_N": {
+            "type": [
+              "number",
+              "null"
+            ],
+            "exclusiveMinimum": 0
+          },
+          "effective_area_cm2": {
+            "type": [
+              "number",
+              "null"
+            ],
+            "exclusiveMinimum": 0
+          },
+          "participant_id": {
+            "type": "string",
+            "minLength": 1
+          },
+          "trial_id": {
+            "type": "string",
+            "minLength": 1
+          },
+          "trial_index": {
+            "type": "integer",
+            "minimum": 1
+          },
+          "direction": {
+            "const": "backward"
+          },
+          "available": {
+            "type": "boolean"
+          },
+          "exclusion_reason": {
+            "type": "string"
+          }
+        },
+        "allOf": [
+          {
+            "if": {
+              "properties": {
+                "available": {
+                  "const": false
+                }
+              }
+            },
+            "then": {
+              "properties": {
+                "exclusion_reason": {
+                  "type": "string",
+                  "minLength": 1
+                }
+              }
+            }
+          }
+        ]
+      }
+    },
+    "sensitivities": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "participant_id",
+          "trial_id",
+          "trial_index",
+          "direction",
+          "available",
+          "exclusion_reason",
+          "speed_kmh",
+          "height_cm",
+          "weight_kg",
+          "age_years",
+          "navicular_ratio",
+          "foot_size_proxy_cm2",
+          "knee_excursion_deg",
+          "ankle_excursion_deg",
+          "contact_ms",
+          "pressure_peak_N",
+          "effective_area_cm2",
+          "qc_status",
+          "spec"
+        ],
+        "properties": {
+          "speed_kmh": {
+            "type": [
+              "number",
+              "null"
+            ],
+            "exclusiveMinimum": 0
+          },
+          "height_cm": {
+            "type": [
+              "number",
+              "null"
+            ],
+            "exclusiveMinimum": 0
+          },
+          "weight_kg": {
+            "type": [
+              "number",
+              "null"
+            ],
+            "exclusiveMinimum": 0
+          },
+          "age_years": {
+            "type": [
+              "number",
+              "null"
+            ],
+            "exclusiveMinimum": 0
+          },
+          "navicular_ratio": {
+            "type": [
+              "number",
+              "null"
+            ],
+            "exclusiveMinimum": 0
+          },
+          "foot_size_proxy_cm2": {
+            "type": [
+              "number",
+              "null"
+            ],
+            "exclusiveMinimum": 0
+          },
+          "knee_excursion_deg": {
+            "type": [
+              "number",
+              "null"
+            ],
+            "exclusiveMinimum": 0
+          },
+          "ankle_excursion_deg": {
+            "type": [
+              "number",
+              "null"
+            ],
+            "exclusiveMinimum": 0
+          },
+          "contact_ms": {
+            "type": [
+              "number",
+              "null"
+            ],
+            "exclusiveMinimum": 0
+          },
+          "pressure_peak_N": {
+            "type": [
+              "number",
+              "null"
+            ],
+            "exclusiveMinimum": 0
+          },
+          "effective_area_cm2": {
+            "type": [
+              "number",
+              "null"
+            ],
+            "exclusiveMinimum": 0
+          },
+          "participant_id": {
+            "type": "string",
+            "minLength": 1
+          },
+          "trial_id": {
+            "type": "string",
+            "minLength": 1
+          },
+          "trial_index": {
+            "type": [
+              "integer",
+              "null"
+            ],
+            "minimum": 1
+          },
+          "direction": {
+            "const": "backward"
+          },
+          "available": {
+            "type": "boolean"
+          },
+          "exclusion_reason": {
+            "type": "string"
+          },
+          "qc_status": {
+            "enum": [
+              "FAIL-MINOR",
+              "FAIL-MODERATE",
+              "FAIL-SEVERE",
+              "MIXED_PASS_WARNING",
+              "NOT_AVAILABLE",
+              "PASS",
+              "WARNING"
+            ]
+          },
+          "spec": {
+            "enum": [
+              "participant_mean",
+              "p10_p90",
+              "offset_m010",
+              "offset_p010",
+              "offset_m025",
+              "offset_p025"
+            ]
+          }
+        },
+        "allOf": [
+          {
+            "if": {
+              "properties": {
+                "available": {
+                  "const": false
+                }
+              }
+            },
+            "then": {
+              "properties": {
+                "exclusion_reason": {
+                  "type": "string",
+                  "minLength": 1
+                }
+              }
+            }
+          },
+          {
+            "if": {
+              "properties": {
+                "available": {
+                  "const": true
+                }
+              }
+            },
+            "then": {
+              "properties": {
+                "knee_excursion_deg": {
+                  "type": "number",
+                  "exclusiveMinimum": 0
+                },
+                "ankle_excursion_deg": {
+                  "type": "number",
+                  "exclusiveMinimum": 0
+                },
+                "qc_status": {
+                  "enum": [
+                    "PASS",
+                    "WARNING",
+                    "MIXED_PASS_WARNING"
+                  ]
+                }
+              }
+            }
+          },
+          {
+            "if": {
+              "properties": {
+                "spec": {
+                  "not": {
+                    "const": "participant_mean"
+                  }
+                }
+              }
+            },
+            "then": {
+              "properties": {
+                "trial_index": {
+                  "type": "integer",
+                  "minimum": 1
+                },
+                "qc_status": {
+                  "not": {
+                    "const": "MIXED_PASS_WARNING"
+                  }
+                }
+              }
+            }
+          }
+        ]
+      }
+    },
+    "pressure_repeats": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "participant_id",
+          "trial_id",
+          "trial_index",
+          "direction",
+          "available",
+          "exclusion_reason",
+          "speed_kmh",
+          "effective_area_cm2"
+        ],
+        "properties": {
+          "speed_kmh": {
+            "type": [
+              "number",
+              "null"
+            ],
+            "exclusiveMinimum": 0
+          },
+          "effective_area_cm2": {
+            "type": [
+              "number",
+              "null"
+            ],
+            "exclusiveMinimum": 0
+          },
+          "participant_id": {
+            "type": "string",
+            "minLength": 1
+          },
+          "trial_id": {
+            "type": "string",
+            "minLength": 1
+          },
+          "trial_index": {
+            "type": "integer",
+            "minimum": 1
+          },
+          "direction": {
+            "const": "backward"
+          },
+          "available": {
+            "type": "boolean"
+          },
+          "exclusion_reason": {
+            "type": "string"
+          }
+        },
+        "allOf": [
+          {
+            "if": {
+              "properties": {
+                "available": {
+                  "const": false
+                }
+              }
+            },
+            "then": {
+              "properties": {
+                "exclusion_reason": {
+                  "type": "string",
+                  "minLength": 1
+                }
+              }
+            }
+          }
+        ]
+      }
+    },
+    "paired_trials": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "participant_id",
+          "trial_id",
+          "trial_index",
+          "direction",
+          "available",
+          "exclusion_reason",
+          "speed_kmh",
+          "height_cm",
+          "weight_kg",
+          "age_years",
+          "navicular_ratio",
+          "foot_size_proxy_cm2",
+          "knee_excursion_deg",
+          "ankle_excursion_deg",
+          "contact_ms",
+          "pressure_peak_N",
+          "effective_area_cm2",
+          "qc_status"
+        ],
+        "properties": {
+          "speed_kmh": {
+            "type": [
+              "number",
+              "null"
+            ],
+            "exclusiveMinimum": 0
+          },
+          "height_cm": {
+            "type": [
+              "number",
+              "null"
+            ],
+            "exclusiveMinimum": 0
+          },
+          "weight_kg": {
+            "type": [
+              "number",
+              "null"
+            ],
+            "exclusiveMinimum": 0
+          },
+          "age_years": {
+            "type": [
+              "number",
+              "null"
+            ],
+            "exclusiveMinimum": 0
+          },
+          "navicular_ratio": {
+            "type": [
+              "number",
+              "null"
+            ],
+            "exclusiveMinimum": 0
+          },
+          "foot_size_proxy_cm2": {
+            "type": [
+              "number",
+              "null"
+            ],
+            "exclusiveMinimum": 0
+          },
+          "knee_excursion_deg": {
+            "type": [
+              "number",
+              "null"
+            ],
+            "exclusiveMinimum": 0
+          },
+          "ankle_excursion_deg": {
+            "type": [
+              "number",
+              "null"
+            ],
+            "exclusiveMinimum": 0
+          },
+          "contact_ms": {
+            "type": [
+              "number",
+              "null"
+            ],
+            "exclusiveMinimum": 0
+          },
+          "pressure_peak_N": {
+            "type": [
+              "number",
+              "null"
+            ],
+            "exclusiveMinimum": 0
+          },
+          "effective_area_cm2": {
+            "type": [
+              "number",
+              "null"
+            ],
+            "exclusiveMinimum": 0
+          },
+          "participant_id": {
+            "type": "string",
+            "minLength": 1
+          },
+          "trial_id": {
+            "type": "string",
+            "minLength": 1
+          },
+          "trial_index": {
+            "type": "integer",
+            "minimum": 1
+          },
+          "direction": {
+            "const": "backward"
+          },
+          "available": {
+            "type": "boolean"
+          },
+          "exclusion_reason": {
+            "type": "string"
+          },
+          "qc_status": {
+            "enum": [
+              "FAIL-MINOR",
+              "FAIL-MODERATE",
+              "FAIL-SEVERE",
+              "NOT_AVAILABLE",
+              "PASS",
+              "WARNING"
+            ]
+          }
+        },
+        "allOf": [
+          {
+            "if": {
+              "properties": {
+                "available": {
+                  "const": false
+                }
+              }
+            },
+            "then": {
+              "properties": {
+                "exclusion_reason": {
+                  "type": "string",
+                  "minLength": 1
+                }
+              }
+            }
+          },
+          {
+            "if": {
+              "properties": {
+                "available": {
+                  "const": true
+                }
+              }
+            },
+            "then": {
+              "properties": {
+                "knee_excursion_deg": {
+                  "type": "number",
+                  "exclusiveMinimum": 0
+                },
+                "ankle_excursion_deg": {
+                  "type": "number",
+                  "exclusiveMinimum": 0
+                },
+                "qc_status": {
+                  "enum": [
+                    "PASS",
+                    "WARNING"
+                  ]
+                }
+              }
+            }
+          }
+        ]
+      }
+    },
+    "cohort_profiles": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "participant_id",
+          "height_cm",
+          "weight_kg",
+          "age_years",
+          "bmi",
+          "body_fat_pct",
+          "navicular_height_L_mm",
+          "navicular_height_R_mm",
+          "subject_median_speed_kmh",
+          "recorded_sex"
+        ],
+        "properties": {
+          "height_cm": {
+            "type": [
+              "number",
+              "null"
+            ],
+            "exclusiveMinimum": 0
+          },
+          "weight_kg": {
+            "type": [
+              "number",
+              "null"
+            ],
+            "exclusiveMinimum": 0
+          },
+          "age_years": {
+            "type": [
+              "number",
+              "null"
+            ],
+            "exclusiveMinimum": 0
+          },
+          "bmi": {
+            "type": [
+              "number",
+              "null"
+            ],
+            "exclusiveMinimum": 0
+          },
+          "body_fat_pct": {
+            "type": [
+              "number",
+              "null"
+            ],
+            "exclusiveMinimum": 0
+          },
+          "navicular_height_L_mm": {
+            "type": [
+              "number",
+              "null"
+            ],
+            "exclusiveMinimum": 0
+          },
+          "navicular_height_R_mm": {
+            "type": [
+              "number",
+              "null"
+            ],
+            "exclusiveMinimum": 0
+          },
+          "subject_median_speed_kmh": {
+            "type": [
+              "number",
+              "null"
+            ],
+            "exclusiveMinimum": 0
+          },
+          "participant_id": {
+            "type": "string",
+            "minLength": 1
+          },
+          "recorded_sex": {
+            "enum": [
+              null,
+              "F",
+              "M",
+              "other",
+              "unknown"
+            ]
+          }
+        }
+      }
+    }
+  },
+  "allOf": [
+    {
+      "if": {
+        "required": [
+          "cohort_profiles"
+        ]
+      },
+      "then": {
+        "properties": {
+          "metadata": {
+            "properties": {
+              "units": {
+                "required": [
+                  "bmi",
+                  "body_fat_pct",
+                  "navicular_height_L_mm",
+                  "navicular_height_R_mm",
+                  "subject_median_speed_kmh"
+                ]
+              }
+            }
+          }
+        }
+      }
+    }
+  ],
+  "$comment": "Python additionally validates composite keys, cohort subsets, six-spec coverage, whitespace-only reasons and finite values."
+}

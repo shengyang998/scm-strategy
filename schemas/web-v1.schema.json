@@ -1,0 +1,451 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version",
+    "dataset_kind",
+    "generator",
+    "units",
+    "records",
+    "analysis",
+    "disclaimer"
+  ],
+  "properties": {
+    "schema_version": {
+      "const": "scm-strategy.web/1"
+    },
+    "dataset_kind": {
+      "const": "synthetic"
+    },
+    "generator": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "version",
+        "seed",
+        "parameters"
+      ],
+      "properties": {
+        "version": {
+          "const": "scm-strategy.equations/1"
+        },
+        "seed": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "parameters": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "participants"
+          ],
+          "properties": {
+            "participants": {
+              "type": "integer",
+              "minimum": 20,
+              "maximum": 10000
+            }
+          }
+        }
+      }
+    },
+    "units": {
+      "const": {
+        "speed_kmh": "km/h",
+        "height_cm": "cm",
+        "weight_kg": "kg",
+        "age_years": "year",
+        "navicular_ratio": "1",
+        "foot_size_proxy_cm2": "cm^2",
+        "knee_excursion_deg": "degree",
+        "ankle_excursion_deg": "degree",
+        "contact_ms": "ms",
+        "pressure_peak_N": "N",
+        "effective_area_cm2": "cm^2"
+      }
+    },
+    "records": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "participant_id",
+          "speed_kmh",
+          "height_cm",
+          "weight_kg",
+          "age_years",
+          "navicular_ratio",
+          "foot_size_proxy_cm2",
+          "knee_excursion_deg",
+          "ankle_excursion_deg",
+          "contact_ms",
+          "pressure_peak_N",
+          "effective_area_cm2"
+        ],
+        "properties": {
+          "participant_id": {
+            "type": "string",
+            "pattern": "^[A-Za-z0-9_-]{1,64}$"
+          },
+          "speed_kmh": {
+            "type": "number",
+            "exclusiveMinimum": 0
+          },
+          "height_cm": {
+            "type": "number",
+            "exclusiveMinimum": 0
+          },
+          "weight_kg": {
+            "type": "number",
+            "exclusiveMinimum": 0
+          },
+          "age_years": {
+            "type": "number",
+            "exclusiveMinimum": 0
+          },
+          "navicular_ratio": {
+            "type": "number",
+            "exclusiveMinimum": 0
+          },
+          "foot_size_proxy_cm2": {
+            "type": "number",
+            "exclusiveMinimum": 0
+          },
+          "knee_excursion_deg": {
+            "type": "number",
+            "exclusiveMinimum": 0
+          },
+          "ankle_excursion_deg": {
+            "type": "number",
+            "exclusiveMinimum": 0
+          },
+          "contact_ms": {
+            "type": "number",
+            "exclusiveMinimum": 0
+          },
+          "pressure_peak_N": {
+            "type": "number",
+            "exclusiveMinimum": 0
+          },
+          "effective_area_cm2": {
+            "type": "number",
+            "exclusiveMinimum": 0
+          }
+        }
+      }
+    },
+    "analysis": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "contact_ms",
+        "pressure_peak_N"
+      ],
+      "properties": {
+        "contact_ms": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "unit",
+            "cross_validation",
+            "delta_mae_bootstrap_ci95",
+            "coefficients",
+            "predictions"
+          ],
+          "properties": {
+            "unit": {
+              "enum": [
+                "ms",
+                "N"
+              ]
+            },
+            "cross_validation": {
+              "type": "object",
+              "additionalProperties": false,
+              "required": [
+                "mean_mae",
+                "mean_rmse",
+                "baseline_mae",
+                "baseline_rmse",
+                "augmented_mae",
+                "augmented_rmse",
+                "delta_mae_baseline_minus_augmented"
+              ],
+              "properties": {
+                "mean_mae": {
+                  "type": "number"
+                },
+                "mean_rmse": {
+                  "type": "number"
+                },
+                "baseline_mae": {
+                  "type": "number"
+                },
+                "baseline_rmse": {
+                  "type": "number"
+                },
+                "augmented_mae": {
+                  "type": "number"
+                },
+                "augmented_rmse": {
+                  "type": "number"
+                },
+                "delta_mae_baseline_minus_augmented": {
+                  "type": "number"
+                }
+              }
+            },
+            "delta_mae_bootstrap_ci95": {
+              "anyOf": [
+                {
+                  "type": "null"
+                },
+                {
+                  "type": "array",
+                  "minItems": 2,
+                  "maxItems": 2,
+                  "items": {
+                    "type": "number"
+                  }
+                }
+              ]
+            },
+            "coefficients": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "additionalProperties": false,
+                "required": [
+                  "term",
+                  "estimate",
+                  "hc3_ci95",
+                  "bootstrap_ci95"
+                ],
+                "properties": {
+                  "term": {
+                    "type": "string"
+                  },
+                  "estimate": {
+                    "type": "number"
+                  },
+                  "hc3_ci95": {
+                    "anyOf": [
+                      {
+                        "type": "null"
+                      },
+                      {
+                        "type": "array",
+                        "minItems": 2,
+                        "maxItems": 2,
+                        "items": {
+                          "type": "number"
+                        }
+                      }
+                    ]
+                  },
+                  "bootstrap_ci95": {
+                    "anyOf": [
+                      {
+                        "type": "null"
+                      },
+                      {
+                        "type": "array",
+                        "minItems": 2,
+                        "maxItems": 2,
+                        "items": {
+                          "type": "number"
+                        }
+                      }
+                    ]
+                  }
+                }
+              }
+            },
+            "predictions": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "additionalProperties": false,
+                "required": [
+                  "participant_id",
+                  "observed",
+                  "baseline_prediction",
+                  "augmented_prediction"
+                ],
+                "properties": {
+                  "participant_id": {
+                    "type": "string",
+                    "pattern": "^SYN-[0-9]{5}$"
+                  },
+                  "observed": {
+                    "type": "number"
+                  },
+                  "baseline_prediction": {
+                    "type": "number"
+                  },
+                  "augmented_prediction": {
+                    "type": "number"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "pressure_peak_N": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "unit",
+            "cross_validation",
+            "delta_mae_bootstrap_ci95",
+            "coefficients",
+            "predictions"
+          ],
+          "properties": {
+            "unit": {
+              "enum": [
+                "ms",
+                "N"
+              ]
+            },
+            "cross_validation": {
+              "type": "object",
+              "additionalProperties": false,
+              "required": [
+                "mean_mae",
+                "mean_rmse",
+                "baseline_mae",
+                "baseline_rmse",
+                "augmented_mae",
+                "augmented_rmse",
+                "delta_mae_baseline_minus_augmented"
+              ],
+              "properties": {
+                "mean_mae": {
+                  "type": "number"
+                },
+                "mean_rmse": {
+                  "type": "number"
+                },
+                "baseline_mae": {
+                  "type": "number"
+                },
+                "baseline_rmse": {
+                  "type": "number"
+                },
+                "augmented_mae": {
+                  "type": "number"
+                },
+                "augmented_rmse": {
+                  "type": "number"
+                },
+                "delta_mae_baseline_minus_augmented": {
+                  "type": "number"
+                }
+              }
+            },
+            "delta_mae_bootstrap_ci95": {
+              "anyOf": [
+                {
+                  "type": "null"
+                },
+                {
+                  "type": "array",
+                  "minItems": 2,
+                  "maxItems": 2,
+                  "items": {
+                    "type": "number"
+                  }
+                }
+              ]
+            },
+            "coefficients": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "additionalProperties": false,
+                "required": [
+                  "term",
+                  "estimate",
+                  "hc3_ci95",
+                  "bootstrap_ci95"
+                ],
+                "properties": {
+                  "term": {
+                    "type": "string"
+                  },
+                  "estimate": {
+                    "type": "number"
+                  },
+                  "hc3_ci95": {
+                    "anyOf": [
+                      {
+                        "type": "null"
+                      },
+                      {
+                        "type": "array",
+                        "minItems": 2,
+                        "maxItems": 2,
+                        "items": {
+                          "type": "number"
+                        }
+                      }
+                    ]
+                  },
+                  "bootstrap_ci95": {
+                    "anyOf": [
+                      {
+                        "type": "null"
+                      },
+                      {
+                        "type": "array",
+                        "minItems": 2,
+                        "maxItems": 2,
+                        "items": {
+                          "type": "number"
+                        }
+                      }
+                    ]
+                  }
+                }
+              }
+            },
+            "predictions": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "additionalProperties": false,
+                "required": [
+                  "participant_id",
+                  "observed",
+                  "baseline_prediction",
+                  "augmented_prediction"
+                ],
+                "properties": {
+                  "participant_id": {
+                    "type": "string",
+                    "pattern": "^SYN-[0-9]{5}$"
+                  },
+                  "observed": {
+                    "type": "number"
+                  },
+                  "baseline_prediction": {
+                    "type": "number"
+                  },
+                  "augmented_prediction": {
+                    "type": "number"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "disclaimer": {
+      "type": "string"
+    }
+  }
+}

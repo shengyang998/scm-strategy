@@ -1,0 +1,34 @@
+{
+  "figures": [
+    {
+      "asset": "F1_cohort_flow_selection.png",
+      "sha256": "6e54b2de5736ead6bca17fd3336e4abcec1a142488398a90c7c0336e5cdb75f7",
+      "source": "reviewed aggregate research figure",
+      "contains_real_individual_points_or_ids": false
+    },
+    {
+      "asset": "F2_prediction_sensitivity.png",
+      "sha256": "270c64188a7ba7c0b54931dff79eafd7f0dd93384fc6e8b646b930c15ea66932",
+      "source": "reviewed aggregate research figure",
+      "contains_real_individual_points_or_ids": false
+    },
+    {
+      "asset": "F3_morphology_associations.png",
+      "sha256": "08202657baa42cddf4c4600b3e41fc9282480acc2a46f33b91e7a5c57ada6c80",
+      "source": "reviewed aggregate research figure",
+      "contains_real_individual_points_or_ids": false
+    },
+    {
+      "asset": "F4_measurement_calibration.png",
+      "sha256": "644c26a92109228c9548e59cc9154731f765aa73cb359856cae29ad259f171d9",
+      "source": "reviewed aggregate research figure",
+      "contains_real_individual_points_or_ids": false
+    }
+  ],
+  "review": "All four PNGs matched the reviewed aggregate figure hashes; no image modifications.",
+  "icon": {
+    "asset": "favicon.svg",
+    "sha256": "d7048b1a598957b54eb543d8bf42563409dd7fbf58a3de5e72aa855e7ce99c08",
+    "source": "self-authored local SVG"
+  }
+}

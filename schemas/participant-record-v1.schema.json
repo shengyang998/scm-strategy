@@ -1,0 +1,68 @@
+{
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "participant_id",
+    "speed_kmh",
+    "height_cm",
+    "weight_kg",
+    "age_years",
+    "navicular_ratio",
+    "foot_size_proxy_cm2",
+    "knee_excursion_deg",
+    "ankle_excursion_deg",
+    "contact_ms",
+    "pressure_peak_N",
+    "effective_area_cm2"
+  ],
+  "properties": {
+    "participant_id": {
+      "type": "string",
+      "pattern": "^[A-Za-z0-9_-]{1,64}$"
+    },
+    "speed_kmh": {
+      "type": "number",
+      "exclusiveMinimum": 0
+    },
+    "height_cm": {
+      "type": "number",
+      "exclusiveMinimum": 0
+    },
+    "weight_kg": {
+      "type": "number",
+      "exclusiveMinimum": 0
+    },
+    "age_years": {
+      "type": "number",
+      "exclusiveMinimum": 0
+    },
+    "navicular_ratio": {
+      "type": "number",
+      "exclusiveMinimum": 0
+    },
+    "foot_size_proxy_cm2": {
+      "type": "number",
+      "exclusiveMinimum": 0
+    },
+    "knee_excursion_deg": {
+      "type": "number",
+      "exclusiveMinimum": 0
+    },
+    "ankle_excursion_deg": {
+      "type": "number",
+      "exclusiveMinimum": 0
+    },
+    "contact_ms": {
+      "type": "number",
+      "exclusiveMinimum": 0
+    },
+    "pressure_peak_N": {
+      "type": "number",
+      "exclusiveMinimum": 0
+    },
+    "effective_area_cm2": {
+      "type": "number",
+      "exclusiveMinimum": 0
+    }
+  }
+}

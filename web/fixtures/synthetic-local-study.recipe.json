@@ -1,0 +1,14 @@
+{
+  "generator_version": "scm-strategy.paper-equations/1",
+  "generator_seed": 314159,
+  "parameters": {
+    "total_participants": 30,
+    "primary_participants": 25
+  },
+  "analysis": {
+    "protocol_id": "scm-strategy-pressure/1.0.0",
+    "bootstrap_replicates": 12,
+    "include_design_audit": false
+  },
+  "purpose": "Independent synthetic local-file interface test; not empirical data or full uncertainty validation."
+}

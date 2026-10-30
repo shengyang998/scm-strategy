@@ -1,0 +1,67 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "required": [
+    "schema_version",
+    "dataset_kind",
+    "units"
+  ],
+  "properties": {
+    "schema_version": {
+      "const": "scm-strategy.participants/1"
+    },
+    "dataset_kind": {
+      "enum": [
+        "synthetic",
+        "private_empirical"
+      ]
+    },
+    "units": {
+      "const": {
+        "speed_kmh": "km/h",
+        "height_cm": "cm",
+        "weight_kg": "kg",
+        "age_years": "year",
+        "navicular_ratio": "1",
+        "foot_size_proxy_cm2": "cm^2",
+        "knee_excursion_deg": "degree",
+        "ankle_excursion_deg": "degree",
+        "contact_ms": "ms",
+        "pressure_peak_N": "N",
+        "effective_area_cm2": "cm^2"
+      }
+    },
+    "generator": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "version",
+        "seed",
+        "parameters"
+      ],
+      "properties": {
+        "version": {
+          "const": "scm-strategy.equations/1"
+        },
+        "seed": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "parameters": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "participants"
+          ],
+          "properties": {
+            "participants": {
+              "type": "integer",
+              "minimum": 20,
+              "maximum": 10000
+            }
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,39 @@
+{
+  "validated_at": "2026-10-30T03:39:45.753Z",
+  "node_version": "v26.11.1",
+  "syntax_check": "node --check app.js passed",
+  "node_tests": {
+    "passed": 21,
+    "failed": 0
+  },
+  "contracts": [
+    "scm-strategy.web/1 (remote synthetic only)",
+    "scm-strategy.local-study/1 (explicit local FileReader only)"
+  ],
+  "local_file_limit_bytes": 10485760,
+  "package_owned_demo_unchanged": true,
+  "demo_sha256": "d57cc852d535b63ff1a19f67c5f2506dd7f3fdddef97e32d9d151bbf092b3cef",
+  "files_sha256": {
+    "index.html": "040907543b7dd4de9c7f13a05f995000b499cb4c9a1593df78c5077d4edd3111",
+    "styles.css": "805d5ac1f5c3af7fabba04d0e8952ec2680f61dcdc3eecf2249307a7579ed359",
+    "app.js": "38d345f5768b576b61e8c3c88f360bd87e9c92ab75197b349295513eaf1e7270",
+    "README.md": "5f1bd76e5dbee454b02f09ae1571738475f5b57ed2c29bb866a54535cae6bb1d",
+    "app.test.cjs": "191f04b044a5acc02f4c26cff3cf89ab9b3c548637f198582ae77b1b5595313b",
+    "test-dom.cjs": "8e2b70748d4b2cbfc758c74626c2cde1dce94b46d01ceed8e4b069e7ce3ade6f",
+    "assets/favicon.svg": "d7048b1a598957b54eb543d8bf42563409dd7fbf58a3de5e72aa855e7ce99c08",
+    "fixtures/synthetic-local-study.json": "766adb416106ee8cfa91ada5aebbc7f2ea69186c7d93a41f6bd9315f62a76b2e",
+    "fixtures/README.md": "18278ec3c57e856cbdde84d7632ec2211479015a20681c354d4ad8cc4659b776"
+  },
+  "local_privacy_checks": [
+    "local payload rejected by remote loader",
+    "FileReader size checked before read",
+    "no fetch or storage calls during local import",
+    "third person refused",
+    "null values are not zero",
+    "return to demo clears local records, results and selections",
+    "pending read invalidated on return"
+  ],
+  "fixture_source": "Independent paper-equations generator, seed 314159, 30 source / 25 primary, 12 bootstrap draws; no empirical rows",
+  "browser_qa": "Current local-mode revision awaits owner native-browser QA; no browser or deployment used by this task.",
+  "scope": "Only web source/resources changed; frozen paper computation and data/demo.json were not modified."
+}

@@ -1,0 +1,507 @@
+{
+  "status": "passed",
+  "version": "0.2.0",
+  "publication_performed": false,
+  "scope": "Explicit source tree, wheel and source archive; known-private catalog and synthetic provenance checks may be appended externally.",
+  "files": [
+    {
+      "path": ".gitignore",
+      "sha256": "580a0ddd21098e7f25ca13d19cd76c6e9914d26cd2e8de60e913acbb22858413"
+    },
+    {
+      "path": "CITATION.cff",
+      "sha256": "2513efc8c716bc6540e85349b9481ff2f09bf63e5cc43b69da9367aea7e98754"
+    },
+    {
+      "path": "LICENSE",
+      "sha256": "8652f543b5e306a2260341d868534c5f8ed597069ff15a703e47afb2e74beba8"
+    },
+    {
+      "path": "README.md",
+      "sha256": "25fb2ed393f2ce962639acc5f8f5665c9004e6eba47f709aec43b3b63aa41c03"
+    },
+    {
+      "path": "THIRD_PARTY_NOTICES.md",
+      "sha256": "229da0b6db0835ab57fe53d09ea091d099ec095ffb857b4245e9751af05ba380"
+    },
+    {
+      "path": "docs/data-availability.md",
+      "sha256": "f09d51fec8d4cf715f926f12288486d328defcc46194c962b2423d3e2036ddc3"
+    },
+    {
+      "path": "docs/data-contract.md",
+      "sha256": "060a5d1e937e53db0d5cf6fe4c8f75898e5a7be02d2b5918b64d8d0797129232"
+    },
+    {
+      "path": "docs/methods.md",
+      "sha256": "e1b1a84ac75a987af0b554066716e5f2ccb8e881bd3116e56d96c335767cd973"
+    },
+    {
+      "path": "docs/migration_sources.json",
+      "sha256": "a6711f89e518379cfb72c7cd5980a0664fd9f876eee21e2c68d66a2fe7192b4e"
+    },
+    {
+      "path": "docs/paper-reproduction.md",
+      "sha256": "f31f69288fcb4aa040a7e89fbdaa662164164b72fd6911ccc3b11e2c60e7f9ec"
+    },
+    {
+      "path": "docs/paper-study.md",
+      "sha256": "d07869ababc008c347af6b7be875e4b4267f5d6e941ec1cccaa3a451ef115140"
+    },
+    {
+      "path": "docs/web-contract.md",
+      "sha256": "93b218b8f74a5a4b322a3662843381d01ef45698cf5c6243c04813829ba6ada3"
+    },
+    {
+      "path": "examples/synthetic/metadata.json",
+      "sha256": "43bc03e4cbf4f056c98d84f740f257626434f4c5898401a1dcf1ef278cfd5e12"
+    },
+    {
+      "path": "examples/synthetic/participants.csv",
+      "sha256": "0db6d485d8a93add0ba261d09cffb1bca2f8070b7baa9a065443fd5447e47dec"
+    },
+    {
+      "path": "pyproject.toml",
+      "sha256": "1d41a6cc8824141bfd99158261915425204618a47f9f62e68161ba85bdb2e45e"
+    },
+    {
+      "path": "release_allowlist.txt",
+      "sha256": "eee2645a889ad175e39398ae7cf8af93d4df2b2e345a1c9e52a42329857d3b51"
+    },
+    {
+      "path": "schemas/metadata-v1.schema.json",
+      "sha256": "b562cbf6f20db75cb185418cca1c3ec36e29839619ea9b62956fb6bf3f801764"
+    },
+    {
+      "path": "schemas/participant-record-v1.schema.json",
+      "sha256": "6858693d8a2fb8f312cd34c4c925d34a5381fa10c62823469454ff5c823911eb"
+    },
+    {
+      "path": "schemas/web-v1.schema.json",
+      "sha256": "230ece812f6b4b44680fcc1d76e3b594fb72a45af6e28f84cb9ebe5ecf8ca592"
+    },
+    {
+      "path": "src/scm_strategy/__init__.py",
+      "sha256": "2354a3778b65b3fcfce4080e2b9def9ac4b53f05a081c6418cb0a1c7595c3aa7"
+    },
+    {
+      "path": "src/scm_strategy/__main__.py",
+      "sha256": "79ee6f134c5c5193377cf9b189cbdcc3e2095e49ba9cec310114441c15a917c4"
+    },
+    {
+      "path": "src/scm_strategy/analysis.py",
+      "sha256": "3a42079e61738d57ee764921237a8f827e7cf9fa154bf8c9d38ea04df041cd5e"
+    },
+    {
+      "path": "src/scm_strategy/cli.py",
+      "sha256": "bc3d9b9ee9a809eb39aebf77b536262177bedae0ea8cac47f6f9ea0b569f40a0"
+    },
+    {
+      "path": "src/scm_strategy/export.py",
+      "sha256": "6bea2aa9d7bfe4164990f8a1493435450d393cdd35c067b6a44fe1146cb1e97e"
+    },
+    {
+      "path": "src/scm_strategy/features.py",
+      "sha256": "b5dc1b320150946db3c85fe7774f5a7c0ba7df493588f1848e42105a9280c4ed"
+    },
+    {
+      "path": "src/scm_strategy/paper_bundle.py",
+      "sha256": "1f01487aa9aecfc48fdd20986f362e506ed5c0daa7e6e36100835b8d3c79210b"
+    },
+    {
+      "path": "src/scm_strategy/paper_report.py",
+      "sha256": "e74b5b1fca08f1a56a73c6c8de7ff85a6b6b63ac2da29d58317e5a4dde8c53a7"
+    },
+    {
+      "path": "src/scm_strategy/paper_study.py",
+      "sha256": "2fde39de463904122ae7ae3ad86c6dd99750734a37430be0113452fe83c46e9d"
+    },
+    {
+      "path": "src/scm_strategy/paper_synthetic.py",
+      "sha256": "dbae2d40f2bccbbe64c2ebe941bf13c788f9ff3793b693ee24f0fe6639056ba3"
+    },
+    {
+      "path": "src/scm_strategy/protocols/__init__.py",
+      "sha256": "18f2f3dcddab874b6a617ba94064a4d39175cd24de25cf70da82c3b18d57c0a0"
+    },
+    {
+      "path": "src/scm_strategy/protocols/paper-bundle-v1.schema.json",
+      "sha256": "5af61f29fe41b1e6bc934bcd6368e031ae8db4e5456413af0fd94b6a57fececd"
+    },
+    {
+      "path": "src/scm_strategy/protocols/paper_v1.json",
+      "sha256": "55fecf0c2d3748f7ec8b2c403563c1ab165c1aea09e58147940c0ca4be278f88"
+    },
+    {
+      "path": "src/scm_strategy/schema.py",
+      "sha256": "9f2160187b956ac50ab9156fd5a935f5b0f2bf2ac83dc7bcbb218e1f5cdb9cb0"
+    },
+    {
+      "path": "src/scm_strategy/statistics.py",
+      "sha256": "f9a6a9e0b6ea6375a483cbb2cf200fb8e4cb5ad33de2c8e8daeddbc3bebbe98f"
+    },
+    {
+      "path": "src/scm_strategy/synthetic.py",
+      "sha256": "249403fa9a3ffd05b4a737d693fe7fba705d9615ed469a08b64385e519f46452"
+    },
+    {
+      "path": "tests/test_contract_and_cli.py",
+      "sha256": "47c5fe6bb57e589dc0ca8dedb8c3e9fb6b0d85599cd88c4ee53f90659f7046e6"
+    },
+    {
+      "path": "tests/test_features_and_statistics.py",
+      "sha256": "dfec8e8c63358234a329018a8a1fd96a5c886ab6b18da1fe293f40f43878aa03"
+    },
+    {
+      "path": "tests/test_paper_report.py",
+      "sha256": "54c86c945dee0be3a544059a32956b198ea2bcfb24d33187c1ae37fb0f085274"
+    },
+    {
+      "path": "tests/test_paper_study.py",
+      "sha256": "58527dc3a615ff7a545e97525b1038d9b89a8b0fad9895cd1871a8350424620c"
+    },
+    {
+      "path": "tests/test_release_audit.py",
+      "sha256": "6677224cb1721394b65ec159e026c42749220a1ed5ff494e3a194c348f196ffa"
+    },
+    {
+      "path": "tools/audit_release.py",
+      "sha256": "d42cf3119140967a30a328f0565d26bfa2e27250b2d2be288180471fc1d8fc4f"
+    },
+    {
+      "path": "tools/generate_contracts.py",
+      "sha256": "06572c409ff9bca7339d2843c821b0921be02ddc2e6609542f7a823855693add"
+    },
+    {
+      "path": "uv.lock",
+      "sha256": "0c67050b1d91ff9a8cfd5c3e09d65286885f8b47af7f6e62d013b1c3170066e3"
+    },
+    {
+      "path": "web/README.md",
+      "sha256": "fc9276cc073aa24b8bca63aa187460f5799a3ded689918a52bc572413d0f84b8"
+    },
+    {
+      "path": "web/app.js",
+      "sha256": "38d345f5768b576b61e8c3c88f360bd87e9c92ab75197b349295513eaf1e7270"
+    },
+    {
+      "path": "web/app.test.cjs",
+      "sha256": "191f04b044a5acc02f4c26cff3cf89ab9b3c548637f198582ae77b1b5595313b"
+    },
+    {
+      "path": "web/assets/F1_cohort_flow_selection.png",
+      "sha256": "6e54b2de5736ead6bca17fd3336e4abcec1a142488398a90c7c0336e5cdb75f7"
+    },
+    {
+      "path": "web/assets/F2_prediction_sensitivity.png",
+      "sha256": "270c64188a7ba7c0b54931dff79eafd7f0dd93384fc6e8b646b930c15ea66932"
+    },
+    {
+      "path": "web/assets/F3_morphology_associations.png",
+      "sha256": "08202657baa42cddf4c4600b3e41fc9282480acc2a46f33b91e7a5c57ada6c80"
+    },
+    {
+      "path": "web/assets/F4_measurement_calibration.png",
+      "sha256": "644c26a92109228c9548e59cc9154731f765aa73cb359856cae29ad259f171d9"
+    },
+    {
+      "path": "web/assets/favicon.svg",
+      "sha256": "d7048b1a598957b54eb543d8bf42563409dd7fbf58a3de5e72aa855e7ce99c08"
+    },
+    {
+      "path": "web/assets/manifest.json",
+      "sha256": "596cc3f0aec2676b1e3e114e081f206246d7c7f6f8c0f3942919c9b710b8e91c"
+    },
+    {
+      "path": "web/data/demo.json",
+      "sha256": "d57cc852d535b63ff1a19f67c5f2506dd7f3fdddef97e32d9d151bbf092b3cef"
+    },
+    {
+      "path": "web/fixtures/README.md",
+      "sha256": "1265d7a2cb4aab87406ba8881115b5cf9f4671b46ef24085df114be93e9f2f55"
+    },
+    {
+      "path": "web/fixtures/synthetic-local-study.json",
+      "sha256": "766adb416106ee8cfa91ada5aebbc7f2ea69186c7d93a41f6bd9315f62a76b2e"
+    },
+    {
+      "path": "web/fixtures/synthetic-local-study.recipe.json",
+      "sha256": "7ffee9bac86fefaa5b31c1e3d58dd6b31c74058a4eb9add709ac4bb0a45174a1"
+    },
+    {
+      "path": "web/index.html",
+      "sha256": "68b5e5ced976bcf6210938a410a895a7e49b7313576c60ffdb34d4572f0d3a88"
+    },
+    {
+      "path": "web/styles.css",
+      "sha256": "805d5ac1f5c3af7fabba04d0e8952ec2680f61dcdc3eecf2249307a7579ed359"
+    },
+    {
+      "path": "web/test-dom.cjs",
+      "sha256": "8e2b70748d4b2cbfc758c74626c2cde1dce94b46d01ceed8e4b069e7ce3ade6f"
+    },
+    {
+      "path": "web/validation.json",
+      "sha256": "c94e66f080b76edb612935f1b62b375ee829b1d7789311643cba123ff1d69db2"
+    }
+  ],
+  "wheel": {
+    "filename": "scm_strategy-0.2.0-py3-none-any.whl",
+    "files": [
+      "scm_strategy/__init__.py",
+      "scm_strategy/__main__.py",
+      "scm_strategy/analysis.py",
+      "scm_strategy/cli.py",
+      "scm_strategy/export.py",
+      "scm_strategy/features.py",
+      "scm_strategy/paper_bundle.py",
+      "scm_strategy/paper_report.py",
+      "scm_strategy/paper_study.py",
+      "scm_strategy/paper_synthetic.py",
+      "scm_strategy/schema.py",
+      "scm_strategy/statistics.py",
+      "scm_strategy/synthetic.py",
+      "scm_strategy/protocols/__init__.py",
+      "scm_strategy/protocols/paper-bundle-v1.schema.json",
+      "scm_strategy/protocols/paper_v1.json",
+      "scm_strategy/THIRD_PARTY_NOTICES.md",
+      "scm_strategy-0.2.0.dist-info/METADATA",
+      "scm_strategy-0.2.0.dist-info/WHEEL",
+      "scm_strategy-0.2.0.dist-info/entry_points.txt",
+      "scm_strategy-0.2.0.dist-info/licenses/LICENSE",
+      "scm_strategy-0.2.0.dist-info/RECORD"
+    ],
+    "unexpected_members": []
+  },
+  "sdist": {
+    "filename": "scm_strategy-0.2.0.tar.gz",
+    "files": [
+      ".gitignore",
+      "CITATION.cff",
+      "LICENSE",
+      "PKG-INFO",
+      "README.md",
+      "THIRD_PARTY_NOTICES.md",
+      "docs/data-availability.md",
+      "docs/data-contract.md",
+      "docs/methods.md",
+      "docs/migration_sources.json",
+      "docs/paper-reproduction.md",
+      "docs/paper-study.md",
+      "docs/web-contract.md",
+      "examples/synthetic/metadata.json",
+      "examples/synthetic/participants.csv",
+      "publishing_audit.json",
+      "pyproject.toml",
+      "release_allowlist.txt",
+      "schemas/metadata-v1.schema.json",
+      "schemas/participant-record-v1.schema.json",
+      "schemas/web-v1.schema.json",
+      "src/scm_strategy/__init__.py",
+      "src/scm_strategy/__main__.py",
+      "src/scm_strategy/analysis.py",
+      "src/scm_strategy/cli.py",
+      "src/scm_strategy/export.py",
+      "src/scm_strategy/features.py",
+      "src/scm_strategy/paper_bundle.py",
+      "src/scm_strategy/paper_report.py",
+      "src/scm_strategy/paper_study.py",
+      "src/scm_strategy/paper_synthetic.py",
+      "src/scm_strategy/protocols/__init__.py",
+      "src/scm_strategy/protocols/paper-bundle-v1.schema.json",
+      "src/scm_strategy/protocols/paper_v1.json",
+      "src/scm_strategy/schema.py",
+      "src/scm_strategy/statistics.py",
+      "src/scm_strategy/synthetic.py",
+      "tests/test_contract_and_cli.py",
+      "tests/test_features_and_statistics.py",
+      "tests/test_paper_report.py",
+      "tests/test_paper_study.py",
+      "tests/test_release_audit.py",
+      "tools/audit_release.py",
+      "tools/generate_contracts.py",
+      "uv.lock",
+      "web/README.md",
+      "web/app.js",
+      "web/app.test.cjs",
+      "web/assets/F1_cohort_flow_selection.png",
+      "web/assets/F2_prediction_sensitivity.png",
+      "web/assets/F3_morphology_associations.png",
+      "web/assets/F4_measurement_calibration.png",
+      "web/assets/favicon.svg",
+      "web/assets/manifest.json",
+      "web/data/demo.json",
+      "web/fixtures/README.md",
+      "web/fixtures/synthetic-local-study.json",
+      "web/fixtures/synthetic-local-study.recipe.json",
+      "web/index.html",
+      "web/styles.css",
+      "web/test-dom.cjs",
+      "web/validation.json"
+    ],
+    "matches_explicit_source_allowlist": true
+  },
+  "issues": [],
+  "license_scope": "BSD-3-Clause candidate for new contributions only; authorship and public citation metadata remain to be confirmed.",
+  "frozen_candidate_version": "0.2.0",
+  "private_catalog_checks": {
+    "real_identifier_matches": 0,
+    "raw_data_hash_matches": 0,
+    "private_values_or_catalog_not_exported": true
+  },
+  "synthetic_fixture_checks": {
+    "compact_example_recipe_verified": true,
+    "public_demo_regenerated_exactly": true,
+    "local_fixture_regenerated_exactly": true,
+    "public_demo_sha256": "d57cc852d535b63ff1a19f67c5f2506dd7f3fdddef97e32d9d151bbf092b3cef",
+    "local_fixture_sha256": "766adb416106ee8cfa91ada5aebbc7f2ea69186c7d93a41f6bd9315f62a76b2e",
+    "no_empirical_inputs_used": true,
+    "local_fixture_bootstrap_draws": 12,
+    "public_demo_bootstrap_draws": 40
+  },
+  "tests": {
+    "source_python_tests": 33,
+    "source_python_passed": 33,
+    "node_tests": 21,
+    "node_passed": 21,
+    "core_wheel_without_matplotlib": {
+      "mode": "core",
+      "version": "0.2.0",
+      "matplotlib_absent": true,
+      "compact_demo_validate_export": true,
+      "paper_compute_only_22_analyses": true,
+      "local_view_without_matplotlib": true,
+      "report_without_extra_rejected_with_installation_hint": true,
+      "synthetic_draws": 10
+    },
+    "paper_extra_wheel": {
+      "mode": "paper",
+      "version": "0.2.0",
+      "paper_extra_available": true,
+      "analyses": 22,
+      "report_main_and_supplement_tables": true,
+      "aggregate_figures": 4,
+      "local_view_22_analyses": true,
+      "calibration_cli_smoke": true,
+      "synthetic_draws": 10,
+      "full_empirical_uncertainty_claimed": false
+    },
+    "empirical_2000_draw_models_rerun": false
+  },
+  "path_scan_regression": {
+    "bare_policy_prefixes_allowed": true,
+    "validator_regex_constants_allowed": true,
+    "named_Users_home_Volumes_paths_rejected": true,
+    "unicode_username_checked": true,
+    "no_file_exemption_used": true
+  },
+  "dependency_license_inventory": [
+    {
+      "name": "contourpy",
+      "version": "1.4.0",
+      "license_expression": "BSD-3-Clause",
+      "license_first_line": "",
+      "license_files_count": 1
+    },
+    {
+      "name": "cycler",
+      "version": "0.12.1",
+      "license_expression": null,
+      "license_first_line": "Copyright (c) 2015, matplotlib project",
+      "license_files_count": 1
+    },
+    {
+      "name": "fonttools",
+      "version": "4.68.0",
+      "license_expression": null,
+      "license_first_line": "MIT",
+      "license_files_count": 2
+    },
+    {
+      "name": "kiwisolver",
+      "version": "1.5.1",
+      "license_expression": null,
+      "license_first_line": "=========================",
+      "license_files_count": 1
+    },
+    {
+      "name": "matplotlib",
+      "version": "3.11.2",
+      "license_expression": null,
+      "license_first_line": "License agreement for matplotlib versions 1.3.0 and later",
+      "license_files_count": 3
+    },
+    {
+      "name": "numpy",
+      "version": "2.5.4",
+      "license_expression": "BSD-3-Clause AND 0BSD AND MIT AND Zlib AND CC0-1.0",
+      "license_first_line": "",
+      "license_files_count": 20
+    },
+    {
+      "name": "packaging",
+      "version": "26.3",
+      "license_expression": "Apache-2.0 OR BSD-2-Clause",
+      "license_first_line": "",
+      "license_files_count": 5
+    },
+    {
+      "name": "pillow",
+      "version": "13.0.0",
+      "license_expression": "MIT-CMU",
+      "license_first_line": "",
+      "license_files_count": 1
+    },
+    {
+      "name": "pyparsing",
+      "version": "3.3.3",
+      "license_expression": "MIT",
+      "license_first_line": "",
+      "license_files_count": 1
+    },
+    {
+      "name": "python-dateutil",
+      "version": "3.0.0",
+      "license_expression": null,
+      "license_first_line": "Dual License",
+      "license_files_count": 1
+    },
+    {
+      "name": "scipy",
+      "version": "1.18.1",
+      "license_expression": null,
+      "license_first_line": "Copyright (c) 2001-2002 Enthought, Inc. 2003, SciPy Developers.",
+      "license_files_count": 5
+    },
+    {
+      "name": "scm-strategy",
+      "version": "0.2.0",
+      "license_expression": "BSD-3-Clause",
+      "license_first_line": "",
+      "license_files_count": 2
+    },
+    {
+      "name": "six",
+      "version": "1.17.0",
+      "license_expression": null,
+      "license_first_line": "MIT",
+      "license_files_count": 1
+    },
+    {
+      "name": "tzdata",
+      "version": "2026.6",
+      "license_expression": null,
+      "license_first_line": "Apache-2.0",
+      "license_files_count": 2
+    }
+  ],
+  "wheel_sha256": "563ce9e948770761846277a2e8ea650578d621b06b17a9a0f936b704b7216b93",
+  "source_archive_hash_location": "External final release manifest; omitted here to avoid a self-containing archive hash cycle.",
+  "owner_reported_browser_acceptance": {
+    "passed": true,
+    "code_change_after_browser_check": "static GitHub footer link; Node tests rerun",
+    "scope": "desktop and 390px layout; filters; two/third selection; keyboard; models; dialogs; local import/clear and schema errors",
+    "CSP_policy_relaxed": false
+  },
+  "release_action": "Owner publishes this candidate; no GitHub mutation was performed by this packaging task."
+}

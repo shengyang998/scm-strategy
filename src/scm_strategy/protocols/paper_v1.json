@@ -1,0 +1,94 @@
+{
+  "protocol_id": "scm-strategy-pressure/1.0.0",
+  "status": "frozen_before_new_body_motion_pressure_associations",
+  "date": "2026-10-30",
+  "study_type": "exploratory_observational",
+  "seed": 20261030,
+  "bootstrap_replicates": 2000,
+  "independent_unit": "participant",
+  "primary_pair_selection": "earliest numeric Zebris replicate_index among conservative_pair_eligible pairs, then anonymous trial id",
+  "extension_selection": "earliest exploratory-eligible backward replicate_index >= 2 per participant",
+  "window_seconds": 20.0,
+  "window_placement": "centered in common motion-pressure interval for paired trials; centered in pressure event coverage for extension trials",
+  "minimum_complete_events_per_side": 10,
+  "motion_features": {
+    "knee_excursion_deg": [
+      "knee_angle_l",
+      "knee_angle_r"
+    ],
+    "ankle_excursion_deg": [
+      "ankle_angle_l",
+      "ankle_angle_r"
+    ]
+  },
+  "motion_percentiles": [
+    5,
+    95
+  ],
+  "motion_side_aggregation": "arithmetic mean of left and right percentile excursions",
+  "pressure_side_aggregation": "arithmetic mean of left and right event medians",
+  "primary_outcome": "contact_ms",
+  "secondary_outcome": "pressure_peak_N",
+  "conditional_secondary_distribution": "effective_area_cm2",
+  "morphology_exposure": "mean(navicular_height_L_mm / foot_length_L_mm, navicular_height_R_mm / foot_length_R_mm)",
+  "primary_baseline": [
+    "log_speed_kmh",
+    "log_height_cm"
+  ],
+  "secondary_baseline": [
+    "log_speed_kmh",
+    "log_weight_kg"
+  ],
+  "strategy_terms": [
+    "knee_excursion_deg_per10",
+    "ankle_excursion_deg_per10"
+  ],
+  "outcome_transform": "natural_log",
+  "retransformation": "training-only Duan smearing",
+  "predictive_metric_primary": "participant-balanced MAE in original units",
+  "predictive_comparison": "baseline MAE minus augmented MAE",
+  "cross_validation": "leave-one-participant-out; all duplicate bootstrap copies of held-out participant excluded from training",
+  "coefficient_intervals": [
+    "HC3 Student t with residual df",
+    "participant bootstrap percentile 95%"
+  ],
+  "equivalence": "no substantive threshold asserted; report 90% CI containment frontier and actual observations separately",
+  "case_speed_caliper_kmh": 0.15,
+  "case_max_pairs": 3,
+  "case_selection": "descending standardized Euclidean distance in height, weight and morphology exposure among speed-matched pairs; greedy disjoint participant pairs; tie by anonymous ids; never select by outcomes or strategies",
+  "minimum_main_participants": 20,
+  "maximum_standardized_design_condition_number": 30,
+  "sensitivity": [
+    "PASS_only",
+    "participant_mean_all_eligible_near_speed_pairs",
+    "motion_percentiles_10_90",
+    "time_offset_minus_0.10s",
+    "time_offset_plus_0.10s",
+    "time_offset_minus_0.25s",
+    "time_offset_plus_0.25s",
+    "primary_height_replaced_by_age"
+  ],
+  "prohibited_claims": [
+    "causal_compensation",
+    "metabolic_economy",
+    "injury_prediction",
+    "universal_running_quality_score",
+    "independent_participant_count_equal_to_steps"
+  ],
+  "notes": "Earlier aggregate QC, repeatability and speed-contact plots have been seen. New body-motion-pressure associations have not. This local freeze is not external preregistration. No anatomical pressure regions are used in v1.",
+  "sensitivity_table_specs": [
+    "participant_mean",
+    "p10_p90",
+    "offset_m010",
+    "offset_p010",
+    "offset_m025",
+    "offset_p025"
+  ],
+  "age_sensitivity_term": "age_years_per10",
+  "morphology_term": "navicular_ratio_per001",
+  "repeat_speed_tolerance_kmh": 0.15,
+  "repeat_primary_seed_offset": 1,
+  "case_scaling_ddof": 1,
+  "feature_quantile_method": "linear",
+  "standardized_feature_boundary": "Input is a typed, already extracted bundle; no raw device decoding, synchronization, or source-QC reconstruction."
+}

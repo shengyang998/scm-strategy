@@ -1,0 +1,10 @@
+{
+  "statistics_core": {
+    "sha256": "82b63cba7babaf62959becb4e83886dd757e73db5baf065f6acbfd379871088b",
+    "scope": "New research numerical core, migrated without device readers or data."
+  },
+  "numerical_feature_functions": {
+    "sha256": "e3f32df705d8455a845b038d3d64564f64cd9f7a43f0bae6138ad09186bdbf81",
+    "scope": "Only independently authored Aeff, force-weighted aggregation and percentile arithmetic; no source adapters copied."
+  }
+}

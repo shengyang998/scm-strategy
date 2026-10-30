@@ -1,0 +1,24 @@
+{
+  "dataset_kind": "synthetic",
+  "generator": {
+    "parameters": {
+      "participants": 30
+    },
+    "seed": 42,
+    "version": "scm-strategy.equations/1"
+  },
+  "schema_version": "scm-strategy.participants/1",
+  "units": {
+    "age_years": "year",
+    "ankle_excursion_deg": "degree",
+    "contact_ms": "ms",
+    "effective_area_cm2": "cm^2",
+    "foot_size_proxy_cm2": "cm^2",
+    "height_cm": "cm",
+    "knee_excursion_deg": "degree",
+    "navicular_ratio": "1",
+    "pressure_peak_N": "N",
+    "speed_kmh": "km/h",
+    "weight_kg": "kg"
+  }
+}
