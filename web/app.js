@@ -11,6 +11,7 @@
   }
 })(typeof globalThis !== "undefined" ? globalThis : this, function () {
   "use strict";
+  const pattern = typeof module === "object" && module.exports ? require("./pattern.js") : globalThis.SCMPattern;
   const METRICS = Object.freeze({
     speed_kmh: { label: "跑台速度", unit: "km/h", digits: 2, step: .1, group: "任务条件" },
     height_cm: { label: "身高", unit: "cm", digits: 1, step: .5, group: "身体条件" },
@@ -20,7 +21,7 @@
     foot_size_proxy_cm2: { label: "足部尺寸代理", unit: "cm²", digits: 1, step: 1, group: "身体条件" },
     knee_excursion_deg: { label: "膝幅度 P95 − P5", unit: "°", digits: 1, group: "动作指标" },
     ankle_excursion_deg: { label: "踝幅度 P95 − P5", unit: "°", digits: 1, group: "动作指标" },
-    contact_ms: { label: "接触时长", unit: "ms", digits: 1, group: "压力结果" },
+    contact_ms: { label: "接触时长", unit: "ms", digits: 1, group: "动作时序" },
     pressure_peak_N: { label: "压力导出峰值", unit: "N", digits: 1, group: "压力结果" },
     effective_area_cm2: { label: "有效承载面积", unit: "cm²", digits: 1, group: "压力结果" }
   });
@@ -117,6 +118,7 @@
   }
 
   function validateLocalPayload(data) {
+    if (data?.schema_version === pattern.SCHEMA) return pattern.validate(data);
     const fail = message => { throw new Error(message); };
     const object = value => value && typeof value === "object" && !Array.isArray(value);
     const exact = (value, allowed) => object(value) && Object.keys(value).every(key => allowed.includes(key));
@@ -162,6 +164,7 @@
   }
 
   function localDataView(payload) {
+    if (payload.schema_version === pattern.SCHEMA) return pattern.dataView(payload);
     const analysis = {};
     for (const outcome of OUTCOMES) {
       const model = payload.analyses[`primary__${outcome}`];
@@ -193,6 +196,7 @@
 
     function renderMode() {
       const local = state.mode === "local";
+      const isPattern = !!state.data?.patternPayload;
       $("mode-badge").textContent = local ? "● 本地私有研究 · 仅内存" : "● Synthetic demo · 合成演示";
       $("mode-badge").classList[local ? "add" : "remove"]("is-local");
       $("return-demo").hidden = !local;
@@ -209,18 +213,28 @@
       $("models-source-tag").textContent = local ? "文件中的结果 · 不重拟合" : "合成分析 · 不随筛选重拟合";
       $("coefficient-caption").textContent = local ? "当前本地主模型系数 · log 结果尺度" : "当前合成模型系数 · log 结果尺度";
       $("findings").hidden = local;
-      $("local-study-results").hidden = !local;
+      $("local-study-results").hidden = !local || isPattern;
       $("study-nav").textContent = local ? "全部分析" : "研究发现";
-      $("study-nav").setAttribute("href", local ? "#local-study-results" : "#findings");
+      $("study-nav").setAttribute("href", local ? (isPattern ? "#models" : "#local-study-results") : "#findings");
+      $("legacy-model-content").hidden = isPattern;
+      $("pattern-model-content").hidden = !isPattern;
+      $("models-subtitle").textContent = isPattern ? "完整样本的关联、区间和条件置换；不以预测误差评判个人动作。" : "查看加入两个动作摘要后，受试者外预测误差如何变化。";
+      $("chart-title").textContent = isPattern ? "动作概要 · 完整路径见下方比较" : "膝与踝的动作幅度";
+      for (const option of $("body-metric").children) option.disabled = !state.data?.records.some(row => finite(row[option.value]));
+      if (isPattern) {
+        $("models-title").textContent = local ? "本地动作—负荷研究结果" : "合成动作—负荷研究结果";
+        $("filter-footnote").textContent = "散点只显示两个幅度概要。选人后查看同侧膝—踝路径；筛选不重拟合关联。";
+        $("explorer-description").textContent = `按速度与身体条件筛选，选择最多两名${recordKind()}，比较完整记录的动作路径与压力描述。`;
+      }
       if (!local) for (const id of ["local-protocol", "local-analysis-tables", "local-measurement", "local-model-details"]) $(id).replaceChildren();
     }
 
     function activateData(data, mode, payload = null) {
       state.data = data; state.mode = mode; state.localPayload = payload; state.outcome = "contact_ms";
       $("load-state").hidden = true; $("explorer-content").hidden = false; $("model-content").hidden = false; $("model-loading").hidden = true;
-      $("dataset-meta").textContent = mode === "local" ? `主表 n = ${data.records.length} · 文件声明来源：${payload.dataset_kind === "synthetic" ? "独立合成" : "私有实证"}` : `n = ${data.records.length} · seed ${data.generator.seed} · ${data.generator.version}`;
+      $("dataset-meta").textContent = mode === "local" ? `主表 n = ${data.records.length} · 文件声明来源：${payload.dataset_kind === "synthetic" ? "独立合成" : "私有实证"}` : `n = ${data.records.length} · seed ${data.generator.seed} · ${data.generator.version || data.generator.name}`;
       renderMode(); reset(); renderModels();
-      if (mode === "local") renderLocalStudy(payload);
+      if (mode === "local" && !data.patternPayload) renderLocalStudy(payload);
     }
 
     async function importFile(file) {
@@ -248,7 +262,7 @@
       state.localPayload = null; state.data = null; state.selected = []; state.filtered = []; state.focusId = null;
       $("local-file").value = ""; $("local-file-status").classList.remove("is-error");
       $("local-file-status").textContent = "私有记录与选择已从当前视图清除，正在使用合成演示。";
-      for (const id of ["comparison-cards", "comparison-body", "point-details", "local-protocol", "local-analysis-tables", "local-measurement", "local-model-details", "scatter", "coefficient-body"]) $(id).replaceChildren();
+      for (const id of ["comparison-cards", "comparison-body", "point-details", "local-protocol", "local-analysis-tables", "local-measurement", "local-model-details", "scatter", "coefficient-body", "trajectory-charts", "pattern-model-content"]) $(id).replaceChildren();
       if (state.remoteData) activateData(state.remoteData, "demo");
       else { state.mode = "demo"; renderMode(); load(); }
     }
@@ -410,9 +424,44 @@
         for (const key of ["a", "b", "delta"]) tr.append(create("td", format(item[key], item.digits, key === "delta")));
         body.append(tr);
       }
+      renderTrajectories(selected);
+    }
+
+    function renderTrajectories(selected) {
+      const available = selected.filter(row => row.trajectories);
+      $("trajectory-panel").hidden = !state.data.patternPayload || !selected.length;
+      const holder = $("trajectory-charts"); holder.replaceChildren();
+      if (!available.length) { holder.append(create("p", "所选记录没有可显示轨迹；不补值。")); return; }
+      $("trajectory-note").textContent = "同一记录的模型角度路径，不是触地相位或独立测量真值。" + available.map(row => {
+        const s = row.trajectory_sampling;
+        return s ? `${selected.indexOf(row) ? "B" : "A"}：显示 ${s.display_points} / ${s.source_points} 点${s.simplified ? "（仅显示已简化）" : "（原顺序全点保留）"}。` : "此文件未提供原始/显示点数，不据此宣称全点保留。";
+      }).join(" ") + "统计始终使用完整输入，显示简化不改变统计。";
+      for (const [side, label] of [["left", "左侧"], ["right", "右侧"]]) {
+        const card = create("div", undefined, "trajectory-card"); card.append(create("h4", `${label} · 膝—踝角度路径`));
+        const svg = svgNode("svg", { viewBox: "0 0 440 320", role: "img", "aria-label": `${label}同记录膝—踝模型坐标，单位度；采样说明见图前文字` });
+        const xs = available.flatMap(r => r.trajectories[side].knee_deg), ys = available.flatMap(r => r.trajectories[side].ankle_deg);
+        const xmin = Math.min(...xs), xmax = Math.max(...xs), ymin = Math.min(...ys), ymax = Math.max(...ys);
+        const xr = xmax - xmin || 1, yr = ymax - ymin || 1;
+        const x = v => 50 + (v - xmin + xr * .08) / (xr * 1.16) * 365;
+        const y = v => 265 - (v - ymin + yr * .08) / (yr * 1.16) * 230;
+        for (let k = 0; k < 5; k++) {
+          const xv = xmin + xr * k / 4, yv = ymin + yr * k / 4;
+          svg.append(svgNode("line", { x1: x(xv), y1: 28, x2: x(xv), y2: 270, stroke: "#e8eef1" }), svgNode("text", { x: x(xv), y: 289, "text-anchor": "middle", "font-size": 11 }, format(xv)));
+          svg.append(svgNode("line", { x1: 44, y1: y(yv), x2: 419, y2: y(yv), stroke: "#e8eef1" }), svgNode("text", { x: 37, y: y(yv) + 4, "text-anchor": "end", "font-size": 11 }, format(yv)));
+        }
+        available.forEach(row => {
+          const i = selected.indexOf(row), curve = row.trajectories[side], color = i ? "#b65d32" : "#007787";
+          const d = curve.knee_deg.map((v, j) => `${j ? "L" : "M"}${x(v).toFixed(2)},${y(curve.ankle_deg[j]).toFixed(2)}`).join(" ");
+          svg.append(svgNode("path", { d, stroke: color, "stroke-width": 1.7, fill: "none", opacity: .8 }));
+          card.append(create("p", `${i ? "B" : "A"} · ${row.participant_id}`, i ? "trajectory-b" : "trajectory-a"));
+        });
+        svg.append(svgNode("text", { x: 235, y: 314, "text-anchor": "middle", "font-size": 12 }, "膝模型坐标（°）"), svgNode("text", { transform: "translate(12 150) rotate(-90)", "text-anchor": "middle", "font-size": 12 }, "踝模型坐标（°）"));
+        card.append(svg); holder.append(card);
+      }
     }
 
     function renderModels() {
+      if (state.data.patternPayload) { renderPatternStudy(state.data.patternPayload); return; }
       const data = state.data.analysis[state.outcome], metric = METRICS[state.outcome];
       for (const button of doc.querySelectorAll("[data-outcome]")) { const on = button.dataset.outcome === state.outcome; button.setAttribute("aria-selected", on); button.tabIndex = on ? 0 : -1; }
       $("model-view").setAttribute("aria-labelledby", state.outcome === "contact_ms" ? "tab-contact" : "tab-peak");
@@ -461,6 +510,32 @@
       table.append(body); wrap.append(table); container.append(wrap);
     }
 
+    function renderPatternStudy(payload) {
+      const container = $("pattern-model-content"); container.replaceChildren();
+      const cfg = payload.configuration;
+      container.append(create("p", `主记录 n=${payload.records.length}；bootstrap ${cfg.bootstrap_replicates} 次，置换 ${cfg.permutations} 次${cfg.full_frozen_counts ? "（冻结次数）" : "（合成演示减少次数）"}。区间为探索性区间，未作多重比较校正；不代表个人质量或因果效果。`, "method-callout"));
+      const labels = { primary: "主规格", repeat_mean: "重复均值", speed_adjusted: "速度调整", geometry_adjusted: "足尺寸调整", raw_motion: "原始姿态", static_instead_of_speed: "静态替代速度" };
+      const rows = payload.associations.map(m => {
+        const c = m.coefficients[1], staticFamily = m.family === "static_bilateral";
+        return [staticFamily ? "静态左右差" : "动作左右差", `${m.outcome.includes("area") ? "面积" : "峰值"}${staticFamily ? " log(L/R)" : " |log(L/R)|"}`, labels[m.spec], m.n,
+          m.status === "estimated" ? format(c?.estimate, 5, true) : "未估计", intervalText(c?.hc3_ci95, 5), intervalText(c?.bootstrap_ci95, 5)];
+      });
+      addStudyTable(container, "全部14个固定关联规格 · 静态斜率每比值0.01；动作斜率每1°", ["关系", "压力代理结果", "规格", "独立 n", "斜率", "HC3 95%", "人级 bootstrap 95%"], rows);
+      const counts = payload.body_motion.counts;
+      addStudyTable(container, `身体—动作条件置换 · ${counts.n_effective_people ?? "—"} 人 / ${counts.n_effective_groups ?? "—"} 速度组；边不是独立样本`, ["表示", "条件 r", "置换 p", "Monte Carlo SE"], Object.entries(payload.body_motion.statistics).map(([mode, s]) => [mode === "raw" ? "原始姿态（次要）" : "去均值形状（主要）", s.status === "estimated" ? format(s.conditional_r, 4, true) : "未估计", format(s.two_sided_permutation_p, 4), format(s.monte_carlo_se, 5)]));
+      const details = create("details", undefined, "details-panel"); details.append(create("summary", "数据范围、重复性与完整系数"));
+      details.append(create("p", `协议 ${payload.protocol_id}；种子 ${cfg.seed}。${payload.notice} 几何距离忽略点的顺序，不能证明完整控制策略；相同速度不等于相同效果。`));
+      const repeatRows = Object.entries(payload.repeat_summary).map(([key, r]) => [key, r.n_people ?? "—", format(r.pooled_within_sd, 4), format(r.median_absolute_change, 4), format(r.max_absolute_change, 4)]);
+      addStudyTable(details, "同窗重复者 · 角度单位°，压力侧差为log比；不是总体阈值", ["量", "重复人数", "组内 SD", "绝对变化中位数", "最大绝对变化"], repeatRows);
+      for (const m of payload.associations) {
+        const box = create("details", undefined, "analysis-detail"); box.append(create("summary", `${m.family} / ${m.outcome} / ${m.spec} · ${m.status}`));
+        box.append(create("p", `n=${m.n}；标准化condition ${format(m.condition_number, 2)}；bootstrap有效 ${m.bootstrap_valid ?? "—"} / 失败 ${m.bootstrap_failed ?? "—"}。数值诊断不等于生物学验证。`));
+        addStudyTable(box, "完整模型系数", ["项", "系数", "HC3 95%", "bootstrap 95%"], m.coefficients.map(c => [c.term, format(c.estimate, 5), intervalText(c.hc3_ci95, 5), intervalText(c.bootstrap_ci95, 5)]));
+        details.append(box);
+      }
+      container.append(details);
+    }
+
     function designText(model) {
       const d = model.augmented_diagnostics || model.diagnostics || model.baseline_diagnostics;
       if (!d) return "未提供";
@@ -507,9 +582,10 @@
     async function load() {
       const request = ++state.request; $("load-state").hidden = false; $("load-state").classList.remove("is-error"); $("retry-load").hidden = true; $("load-message").textContent = "正在载入合成数据…";
       try {
-        const response = await fetch("data/demo.json", { credentials: "same-origin", cache: "no-cache" });
+        const response = await fetch("data/pattern-demo.json", { credentials: "same-origin", cache: "no-cache" });
         if (!response.ok) throw new Error("Dataset unavailable.");
-        const data = validateDataset(await response.json()); if (request !== state.request) return;
+        const payload = await response.json();
+        const data = payload?.schema_version === pattern.SCHEMA ? pattern.dataView(pattern.validate(payload, true)) : validateDataset(payload); if (request !== state.request) return;
         state.remoteData = data; activateData(data, "demo");
       } catch (error) {
         if (request !== state.request) return;

@@ -1,0 +1,434 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Logical pattern bundle (NPZ arrays shown as lists)",
+  "type": "object",
+  "required": [
+    "metadata",
+    "participants",
+    "pressure_index",
+    "pressure_repeats",
+    "paired_trials",
+    "motion"
+  ],
+  "properties": {
+    "metadata": {
+      "type": "object",
+      "required": [
+        "schema_version",
+        "units",
+        "recording_scope"
+      ],
+      "properties": {
+        "schema_version": {
+          "const": "scm-strategy.pattern-bundle/1"
+        },
+        "units": {
+          "const": {
+            "navicular_height_left_mm": "mm",
+            "navicular_height_right_mm": "mm",
+            "foot_length_left_mm": "mm",
+            "foot_length_right_mm": "mm",
+            "forefoot_width_left_mm": "mm",
+            "forefoot_width_right_mm": "mm",
+            "height_cm": "cm",
+            "weight_kg": "kg",
+            "navicular_ratio": "dimensionless",
+            "speed_kmh": "km/h",
+            "contact_ms": "ms",
+            "pressure_peak_N_left": "N",
+            "pressure_peak_N_right": "N",
+            "effective_area_cm2_left": "cm2",
+            "effective_area_cm2_right": "cm2",
+            "window_start_s": "s",
+            "window_end_s": "s",
+            "window_duration_s": "s",
+            "values_deg": "degree"
+          }
+        },
+        "recording_scope": {
+          "type": "string"
+        },
+        "dataset_kind": {
+          "enum": [
+            "private_empirical",
+            "synthetic"
+          ]
+        }
+      }
+    },
+    "participants": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "participant_id",
+          "height_cm",
+          "weight_kg",
+          "navicular_ratio",
+          "navicular_height_left_mm",
+          "navicular_height_right_mm",
+          "foot_length_left_mm",
+          "foot_length_right_mm",
+          "forefoot_width_left_mm",
+          "forefoot_width_right_mm"
+        ],
+        "properties": {
+          "participant_id": {
+            "type": "string",
+            "minLength": 1
+          },
+          "height_cm": {
+            "type": [
+              "number",
+              "null"
+            ]
+          },
+          "weight_kg": {
+            "type": [
+              "number",
+              "null"
+            ]
+          },
+          "navicular_ratio": {
+            "type": [
+              "number",
+              "null"
+            ]
+          },
+          "navicular_height_left_mm": {
+            "type": [
+              "number",
+              "null"
+            ]
+          },
+          "navicular_height_right_mm": {
+            "type": [
+              "number",
+              "null"
+            ]
+          },
+          "foot_length_left_mm": {
+            "type": [
+              "number",
+              "null"
+            ]
+          },
+          "foot_length_right_mm": {
+            "type": [
+              "number",
+              "null"
+            ]
+          },
+          "forefoot_width_left_mm": {
+            "type": [
+              "number",
+              "null"
+            ]
+          },
+          "forefoot_width_right_mm": {
+            "type": [
+              "number",
+              "null"
+            ]
+          }
+        },
+        "additionalProperties": false
+      }
+    },
+    "pressure_index": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "participant_id",
+          "trial_id",
+          "speed_kmh",
+          "contact_ms",
+          "pressure_peak_N_left",
+          "pressure_peak_N_right",
+          "effective_area_cm2_left",
+          "effective_area_cm2_right"
+        ],
+        "properties": {
+          "participant_id": {
+            "type": "string",
+            "minLength": 1
+          },
+          "trial_id": {
+            "type": "string",
+            "minLength": 1
+          },
+          "speed_kmh": {
+            "type": [
+              "number",
+              "null"
+            ]
+          },
+          "contact_ms": {
+            "type": [
+              "number",
+              "null"
+            ]
+          },
+          "pressure_peak_N_left": {
+            "type": [
+              "number",
+              "null"
+            ]
+          },
+          "pressure_peak_N_right": {
+            "type": [
+              "number",
+              "null"
+            ]
+          },
+          "effective_area_cm2_left": {
+            "type": [
+              "number",
+              "null"
+            ]
+          },
+          "effective_area_cm2_right": {
+            "type": [
+              "number",
+              "null"
+            ]
+          }
+        },
+        "additionalProperties": false
+      }
+    },
+    "pressure_repeats": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "participant_id",
+          "trial_id",
+          "replicate_index",
+          "speed_kmh",
+          "contact_ms",
+          "pressure_peak_N_left",
+          "pressure_peak_N_right",
+          "effective_area_cm2_left",
+          "effective_area_cm2_right",
+          "available",
+          "direction",
+          "n_left_events",
+          "n_right_events",
+          "window_duration_s"
+        ],
+        "properties": {
+          "participant_id": {
+            "type": "string",
+            "minLength": 1
+          },
+          "trial_id": {
+            "type": "string",
+            "minLength": 1
+          },
+          "replicate_index": {
+            "type": "integer",
+            "minimum": 0
+          },
+          "speed_kmh": {
+            "type": [
+              "number",
+              "null"
+            ]
+          },
+          "contact_ms": {
+            "type": [
+              "number",
+              "null"
+            ]
+          },
+          "pressure_peak_N_left": {
+            "type": [
+              "number",
+              "null"
+            ]
+          },
+          "pressure_peak_N_right": {
+            "type": [
+              "number",
+              "null"
+            ]
+          },
+          "effective_area_cm2_left": {
+            "type": [
+              "number",
+              "null"
+            ]
+          },
+          "effective_area_cm2_right": {
+            "type": [
+              "number",
+              "null"
+            ]
+          },
+          "available": {
+            "type": "boolean"
+          },
+          "direction": {
+            "type": "string",
+            "minLength": 1
+          },
+          "n_left_events": {
+            "type": "integer",
+            "minimum": 0
+          },
+          "n_right_events": {
+            "type": "integer",
+            "minimum": 0
+          },
+          "window_duration_s": {
+            "type": [
+              "number",
+              "null"
+            ]
+          }
+        },
+        "additionalProperties": false
+      }
+    },
+    "paired_trials": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "pair_id",
+          "participant_id",
+          "replicate_index",
+          "speed_kmh",
+          "is_primary",
+          "primary_order",
+          "analysis_order",
+          "window_start_s",
+          "window_end_s",
+          "contact_ms",
+          "pressure_peak_N_left",
+          "pressure_peak_N_right",
+          "effective_area_cm2_left",
+          "effective_area_cm2_right",
+          "motion_status",
+          "qc_status",
+          "available",
+          "direction",
+          "n_left_events",
+          "n_right_events"
+        ],
+        "properties": {
+          "pair_id": {
+            "type": "string",
+            "minLength": 1
+          },
+          "participant_id": {
+            "type": "string",
+            "minLength": 1
+          },
+          "replicate_index": {
+            "type": "integer",
+            "minimum": 0
+          },
+          "speed_kmh": {
+            "type": [
+              "number",
+              "null"
+            ]
+          },
+          "is_primary": {
+            "type": "boolean"
+          },
+          "primary_order": {
+            "type": [
+              "integer",
+              "null"
+            ],
+            "minimum": 0
+          },
+          "analysis_order": {
+            "type": "integer",
+            "minimum": 0
+          },
+          "window_start_s": {
+            "type": [
+              "number",
+              "null"
+            ]
+          },
+          "window_end_s": {
+            "type": [
+              "number",
+              "null"
+            ]
+          },
+          "contact_ms": {
+            "type": [
+              "number",
+              "null"
+            ]
+          },
+          "pressure_peak_N_left": {
+            "type": [
+              "number",
+              "null"
+            ]
+          },
+          "pressure_peak_N_right": {
+            "type": [
+              "number",
+              "null"
+            ]
+          },
+          "effective_area_cm2_left": {
+            "type": [
+              "number",
+              "null"
+            ]
+          },
+          "effective_area_cm2_right": {
+            "type": [
+              "number",
+              "null"
+            ]
+          },
+          "motion_status": {
+            "type": "string",
+            "minLength": 1
+          },
+          "qc_status": {
+            "type": "string",
+            "minLength": 1
+          },
+          "available": {
+            "type": "boolean"
+          },
+          "direction": {
+            "type": "string",
+            "minLength": 1
+          },
+          "n_left_events": {
+            "type": "integer",
+            "minimum": 0
+          },
+          "n_right_events": {
+            "type": "integer",
+            "minimum": 0
+          }
+        },
+        "additionalProperties": false
+      }
+    },
+    "motion": {
+      "type": "object",
+      "required": [
+        "pair_ids",
+        "row_offsets",
+        "channel_names",
+        "values_deg"
+      ]
+    }
+  },
+  "$comment": "Python validator additionally checks cross-table IDs, unique keys, orders, units, ratio consistency, common windows and safe numeric NPZ bindings."
+}

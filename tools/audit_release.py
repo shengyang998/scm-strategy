@@ -53,7 +53,10 @@ def audit(root,wheel=None,sdist=None):
             if "scm_strategy/THIRD_PARTY_NOTICES.md" not in names:
                 problems.append({"reason":"wheel_third_party_notice_missing"})
             for required in ["scm_strategy/paper_study.py","scm_strategy/paper_report.py","scm_strategy/paper_bundle.py",
-                             "scm_strategy/protocols/paper_v1.json","scm_strategy/protocols/paper-bundle-v1.schema.json"]:
+                             "scm_strategy/protocols/paper_v1.json","scm_strategy/protocols/paper-bundle-v1.schema.json",
+                             "scm_strategy/pattern_study.py","scm_strategy/pattern_bundle.py","scm_strategy/pattern_math.py",
+                             "scm_strategy/pattern_synthetic.py","scm_strategy/protocols/pattern_v1.json",
+                             "scm_strategy/protocols/pattern-bundle-v1.schema.json"]:
                 if required not in names:problems.append({"file":required,"reason":"wheel_paper_resource_missing"})
             metadata_names=[n for n in names if n.endswith(".dist-info/METADATA")]
             if len(metadata_names)!=1 or f"Version: {version}\n" not in archive.read(metadata_names[0]).decode():
@@ -84,7 +87,7 @@ def audit(root,wheel=None,sdist=None):
     return {"status":"passed" if not problems else "failed","version":version,"publication_performed":False,
             "scope":"Explicit source tree, wheel and source archive; known-private catalog and synthetic provenance checks may be appended externally.",
             "files":files,"wheel":wheel_result,"sdist":sdist_result,"issues":problems,
-            "license_scope":"BSD-3-Clause candidate for new contributions only; authorship and public citation metadata remain to be confirmed."}
+            "license_scope":"BSD-3-Clause for new contributions only; authorship and public citation metadata remain to be confirmed."}
 
 
 def main():

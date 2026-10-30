@@ -9,6 +9,7 @@ docs/methods.md
 docs/migration_sources.json
 docs/paper-reproduction.md
 docs/paper-study.md
+docs/pattern-study.md
 docs/web-contract.md
 examples/synthetic/metadata.json
 examples/synthetic/participants.csv
@@ -28,9 +29,15 @@ src/scm_strategy/paper_bundle.py
 src/scm_strategy/paper_report.py
 src/scm_strategy/paper_study.py
 src/scm_strategy/paper_synthetic.py
+src/scm_strategy/pattern_bundle.py
+src/scm_strategy/pattern_math.py
+src/scm_strategy/pattern_study.py
+src/scm_strategy/pattern_synthetic.py
 src/scm_strategy/protocols/__init__.py
 src/scm_strategy/protocols/paper-bundle-v1.schema.json
 src/scm_strategy/protocols/paper_v1.json
+src/scm_strategy/protocols/pattern_v1.json
+src/scm_strategy/protocols/pattern-bundle-v1.schema.json
 src/scm_strategy/schema.py
 src/scm_strategy/statistics.py
 src/scm_strategy/synthetic.py
@@ -38,6 +45,7 @@ tests/test_contract_and_cli.py
 tests/test_features_and_statistics.py
 tests/test_paper_report.py
 tests/test_paper_study.py
+tests/test_pattern_study.py
 tests/test_release_audit.py
 tools/audit_release.py
 tools/generate_contracts.py
@@ -59,3 +67,11 @@ web/index.html
 web/styles.css
 web/test-dom.cjs
 web/validation.json
+src/scm_strategy/pattern_view.py
+web/pattern.js
+web/pattern.test.cjs
+web/data/pattern-demo.json
+web/assets/F1_coverage.png
+web/assets/F2_geometry_repeatability.png
+web/assets/F3_associations.png
+web/assets/F4_joint_proximity_representation.png

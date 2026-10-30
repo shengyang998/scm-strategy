@@ -1,6 +1,38 @@
 {
   "figures": [
     {
+      "asset": "F1_coverage.png",
+      "sha256": "a58069003988f50d49cd722fac65429f097b5de70f4890837a9391a3e86a0703",
+      "source": "reviewed aggregate exploratory pattern-study figure",
+      "contains_real_individual_points_or_ids": false
+    },
+    {
+      "asset": "F2_geometry_repeatability.png",
+      "sha256": "4800ab3d07d63dea3040ee119d5ed4bbdeae6ebb31e618beb8344966f2472b3a",
+      "source": "reviewed aggregate exploratory pattern-study figure",
+      "contains_real_individual_points_or_ids": false
+    },
+    {
+      "asset": "F3_associations.png",
+      "sha256": "52487b5eb793b0a96d5f4f2bda5a94473f0120ab278c3bbc997681a2b935cc90",
+      "source": "reviewed aggregate exploratory pattern-study figure",
+      "contains_real_individual_points_or_ids": false
+    },
+    {
+      "asset": "F4_joint_proximity_representation.png",
+      "sha256": "de3b6a9a57cb2c47fe8b489f32d82bb44599225ddf149737e8ca84681482d872",
+      "source": "reviewed aggregate exploratory pattern-study figure",
+      "contains_real_individual_points_or_ids": false
+    }
+  ],
+  "review": "All four current aggregate figures visually checked and copied byte-for-byte; legacy assets retained for baseline history.",
+  "icon": {
+    "asset": "favicon.svg",
+    "sha256": "d7048b1a598957b54eb543d8bf42563409dd7fbf58a3de5e72aa855e7ce99c08",
+    "source": "self-authored local SVG"
+  },
+  "legacy_figures": [
+    {
       "asset": "F1_cohort_flow_selection.png",
       "sha256": "6e54b2de5736ead6bca17fd3336e4abcec1a142488398a90c7c0336e5cdb75f7",
       "source": "reviewed aggregate research figure",
@@ -24,11 +56,5 @@
       "source": "reviewed aggregate research figure",
       "contains_real_individual_points_or_ids": false
     }
-  ],
-  "review": "All four PNGs matched the reviewed aggregate figure hashes; no image modifications.",
-  "icon": {
-    "asset": "favicon.svg",
-    "sha256": "d7048b1a598957b54eb543d8bf42563409dd7fbf58a3de5e72aa855e7ce99c08",
-    "source": "self-authored local SVG"
-  }
+  ]
 }

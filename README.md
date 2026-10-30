@@ -1,6 +1,31 @@
-# SCM Strategy 0.2.0
+# SCM Strategy 0.3.0
 
-Explicit-unit numerical features, the complete fixed paper-analysis workflow, and independent synthetic demonstrations. [Source repository](https://github.com/shengyang998/scm-strategy). This tree is a locally prepared 0.2.0 release candidate; packaging it does not upload or publish a release.
+Explicit-unit numerical features, exploratory running-pattern comparisons, the preserved fixed paper-analysis workflow, and independent synthetic demonstrations. [Source repository](https://github.com/shengyang998/scm-strategy). This is the 0.3.0 source version; building it does not upload or publish it. The previously released 0.2 workflow remains available unchanged.
+
+## Run the pattern study
+
+```sh
+uv sync --frozen
+uv run --no-sync scm-strategy pattern-demo --out runs/pattern-demo --bootstrap 40 --permutations 99
+uv run --no-sync scm-strategy pattern-study authorized-pattern-bundle --out runs/private-pattern
+```
+
+The first command uses independent equations and reduced resampling for a quick
+installation check. Omit the reductions for 2,000 participant bootstrap draws
+and 9,999 whole-body-vector permutations. Empirical runs require these fixed
+counts. The second command accepts [typed numeric tables and chronological
+four-channel arrays](docs/pattern-study.md), not raw device files or precomputed
+pairwise answers. It calculates raw/centered knee–ankle geometry, all near-speed
+candidates, same-session repeats, the eight static-side and six motion-side
+association specifications, and the final within-speed body-label test. It
+retains uncertainty, negative results, exclusions and numerical failures.
+
+Outputs stay local and non-exportable. Descriptive model-space differences do
+not establish stable biological strategies, equivalence, adaptation, metabolic
+cost or injury risk. Body and movement associations can remain uncertain.
+The new workflow does not reproduce upstream XML/TRC processing, clock or
+marker audits. The `paper-study` command below still reproduces the earlier
+two-summary baseline; it has not been relabeled as the full pattern study.
 
 ## Install and run a full synthetic study
 
@@ -57,7 +82,7 @@ The generic `analyze` command intentionally runs only the two main-model compari
 python -m http.server 8765 --directory web
 ```
 
-Open the local server in a browser. The default data are synthetic. The separate local-file control can load a generated `local-view.json` into memory, with no upload or persistence; returning to the demonstration clears the local data. [Viewer instructions](web/README.md) and the [Web JSON contract](docs/web-contract.md) describe the boundary. Reviewed aggregate research figures are separate from synthetic participant records.
+Open the local server in a browser. The default pattern data are synthetic, with display trajectories linked to the same records and numerical core. The local-file control accepts `pattern-study --local-view` and older `paper-study --local-view` files in memory, with no upload or persistence; returning to the demonstration clears the local data. The [pattern contract](docs/pattern-study.md) describes the new format. [Viewer instructions](web/README.md) and the [Web JSON contract](docs/web-contract.md) describe the boundary. Reviewed aggregate research figures are separate from synthetic participant records.
 
 ## Test and build
 
@@ -66,7 +91,7 @@ uv run --no-sync pytest
 node --test web/app.test.cjs
 uv build --out-dir wheelhouse
 uv venv wheel-test
-uv pip install --python wheel-test/bin/python 'wheelhouse/scm_strategy-0.2.0-py3-none-any.whl[paper]'
+uv pip install --python wheel-test/bin/python 'wheelhouse/scm_strategy-0.3.0-py3-none-any.whl[paper]'
 wheel-test/bin/scm-strategy paper-demo --out runs/installed-smoke --bootstrap 12 --skip-design-audit --report --local-view runs/installed-smoke/local-view.json
 ```
 

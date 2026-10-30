@@ -1,0 +1,22 @@
+{
+  "protocol_id": "scm-strategy.pattern/1",
+  "status": "exploratory_after_prior_results_not_preregistered",
+  "seed": 20261030,
+  "bootstrap_replicates": 2000,
+  "permutations": 9999,
+  "speed_calipers_kmh": [0.1, 0.15, 0.25],
+  "primary_speed_caliper_kmh": 0.15,
+  "repeat_speed_range_kmh": 0.15,
+  "body_fields": ["height_cm", "weight_kg", "navicular_ratio"],
+  "body_scaling": "complete supplied pressure cohort; sample SD ddof=1",
+  "maximum_matching_component_size": 22,
+  "geometry_modes": ["raw", "time_mean_centered"],
+  "sampling_factors": [1, 2, 4],
+  "sign_magnitude_thresholds_log_units": [0, 0.01, 0.02, 0.05, 0.1],
+  "assumed_classical_exposure_reliability": [1, 0.9, 0.75, 0.5, 0.25, 0.1],
+  "static_specs": ["primary", "repeat_mean", "speed_adjusted", "geometry_adjusted"],
+  "motion_specs": ["primary", "raw_motion", "static_instead_of_speed"],
+  "inference": "HC3 t intervals and participant percentile bootstrap; exploratory, unadjusted",
+  "permutation_rule": "entire body vectors within informative speed components; degree weights; within-component centering",
+  "prohibited_claims": ["causal compensation", "effective adaptation", "metabolic cost", "injury risk", "clinical equivalence", "independent kinematic validity"]
+}

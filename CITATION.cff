@@ -1,16 +1,16 @@
 cff-version: 1.2.0
 type: software
 title: SCM Strategy
-version: 0.2.0
+version: 0.3.0
 repository-code: https://github.com/shengyang998/scm-strategy
 message: >-
-  Software release candidate for the linked repository. The collective author
+  Software source package for the linked repository. The collective author
   name is a project placeholder; individual authors remain to be confirmed.
   No archival DOI or institutional endorsement is asserted.
 authors:
   - name: SCM Research contributors
 license: BSD-3-Clause
 abstract: >-
-  Explicit-unit numerical features, participant-level statistical analysis,
-  and an independent equation-generated synthetic demonstration.
+  Explicit-unit numerical features, exploratory running-pattern and
+  participant-level statistical analyses, and independent synthetic examples.
 

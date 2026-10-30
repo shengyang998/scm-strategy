@@ -61,6 +61,15 @@ def parser():
     paperdemo.add_argument("--report",action="store_true")
     paperdemo.add_argument("--calibration")
     paperdemo.add_argument("--local-view")
+    pattern=sub.add_parser("pattern-study",help="run the exploratory pattern and bilateral-pressure workflow from standardized numeric arrays")
+    pattern.add_argument("bundle_directory");pattern.add_argument("--out",required=True)
+    pattern.add_argument("--bootstrap",type=int,default=None);pattern.add_argument("--permutations",type=int,default=None)
+    pattern.add_argument("--local-view",help="local-only display JSON, with bounded display trajectories")
+    patterndemo=sub.add_parser("pattern-demo",help="generate independent synthetic arrays and run the complete pattern workflow")
+    patterndemo.add_argument("--out",required=True);patterndemo.add_argument("--participants",type=int,default=50)
+    patterndemo.add_argument("--primary-participants",type=int,default=25);patterndemo.add_argument("--seed",type=int,default=20261030)
+    patterndemo.add_argument("--bootstrap",type=int,default=None);patterndemo.add_argument("--permutations",type=int,default=None)
+    patterndemo.add_argument("--local-view",help="local-only display JSON; synthetic output may be used as an explicit demo")
     return root
 
 
@@ -99,6 +108,22 @@ def main(argv=None):
             response={"analysis_mode":"paper-study","dataset_kind":"private_empirical","input_dataset_kind":result["input_dataset_kind"],
                       "analyses":len(result["analyses"]),"protocol_id":result["protocol_id"],"exportable":False,
                       "full_frozen_draw_count":result["configuration"]["full_frozen_draw_count"]}
+        elif args.command in {"pattern-study","pattern-demo"}:
+            from .pattern_bundle import read_pattern_bundle,write_pattern_bundle
+            from .pattern_study import run_pattern_study,save_pattern_study
+            if args.command=="pattern-demo":
+                from .pattern_synthetic import generate_pattern_bundle
+                bundle=generate_pattern_bundle(args.participants,args.primary_participants,args.seed)
+                write_pattern_bundle(bundle,Path(args.out)/"input_bundle")
+            else:
+                bundle=read_pattern_bundle(args.bundle_directory)
+            result=run_pattern_study(bundle,bootstrap_replicates=args.bootstrap,permutations=args.permutations)
+            save_pattern_study(result,args.out)
+            if args.local_view:
+                from .pattern_view import write_pattern_view
+                write_pattern_view(bundle,result,args.local_view)
+            response={"analysis_mode":"pattern-study","dataset_kind":result["dataset_kind"],"exportable":False,
+                      "counts":result["counts"],"static_models":len(result["static_bilateral"]["models"]),"motion_models":len(result["motion_bilateral"]["models"])}
         else:
             payload=export_web(args.run_directory,args.out)
             response={"dataset_kind":payload["dataset_kind"],"schema_version":payload["schema_version"],"records":len(payload["records"])}

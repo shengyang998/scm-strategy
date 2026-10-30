@@ -1,6 +1,6 @@
 {
   "status": "passed",
-  "version": "0.2.0",
+  "version": "0.3.0",
   "publication_performed": false,
   "scope": "Explicit source tree, wheel and source archive; known-private catalog and synthetic provenance checks may be appended externally.",
   "files": [
@@ -10,7 +10,7 @@
     },
     {
       "path": "CITATION.cff",
-      "sha256": "2513efc8c716bc6540e85349b9481ff2f09bf63e5cc43b69da9367aea7e98754"
+      "sha256": "8d63bd4450e177ecffa2260ed239cc77473fbdfa86bbb83114f066d06edcb069"
     },
     {
       "path": "LICENSE",
@@ -18,7 +18,7 @@
     },
     {
       "path": "README.md",
-      "sha256": "25fb2ed393f2ce962639acc5f8f5665c9004e6eba47f709aec43b3b63aa41c03"
+      "sha256": "d9ab3b34e53039088b3eea3929322a93c614d0b4faa5d118bd4dcd0973a34066"
     },
     {
       "path": "THIRD_PARTY_NOTICES.md",
@@ -26,7 +26,7 @@
     },
     {
       "path": "docs/data-availability.md",
-      "sha256": "f09d51fec8d4cf715f926f12288486d328defcc46194c962b2423d3e2036ddc3"
+      "sha256": "50e1e0e01d548501a9a4eb0475cc46fec8f574a993fc8ccd547b6962eed397a2"
     },
     {
       "path": "docs/data-contract.md",
@@ -49,6 +49,10 @@
       "sha256": "d07869ababc008c347af6b7be875e4b4267f5d6e941ec1cccaa3a451ef115140"
     },
     {
+      "path": "docs/pattern-study.md",
+      "sha256": "c0a3606d5ab1f68f83b5e6cf29e949d0d17309f0abf482f45819cb3477aabb82"
+    },
+    {
       "path": "docs/web-contract.md",
       "sha256": "93b218b8f74a5a4b322a3662843381d01ef45698cf5c6243c04813829ba6ada3"
     },
@@ -62,11 +66,11 @@
     },
     {
       "path": "pyproject.toml",
-      "sha256": "1d41a6cc8824141bfd99158261915425204618a47f9f62e68161ba85bdb2e45e"
+      "sha256": "4beb89738099138085f9b3e87fb0a67a7a14c1a2bd971321d873922e300d5b10"
     },
     {
       "path": "release_allowlist.txt",
-      "sha256": "eee2645a889ad175e39398ae7cf8af93d4df2b2e345a1c9e52a42329857d3b51"
+      "sha256": "9b1bfdeab67a7779d3aa54f2649b8783df6c17c6f41554e1079a2df04621672b"
     },
     {
       "path": "schemas/metadata-v1.schema.json",
@@ -82,7 +86,7 @@
     },
     {
       "path": "src/scm_strategy/__init__.py",
-      "sha256": "2354a3778b65b3fcfce4080e2b9def9ac4b53f05a081c6418cb0a1c7595c3aa7"
+      "sha256": "ec7f58c74f64fe9c734e231b6b03a355b743e3ff94399d88f927f67fc1f22656"
     },
     {
       "path": "src/scm_strategy/__main__.py",
@@ -94,7 +98,7 @@
     },
     {
       "path": "src/scm_strategy/cli.py",
-      "sha256": "bc3d9b9ee9a809eb39aebf77b536262177bedae0ea8cac47f6f9ea0b569f40a0"
+      "sha256": "ea5c089e6ee814d7951e0bf25a9f4b39b931a13bbeda61ca1d774e95b35827ef"
     },
     {
       "path": "src/scm_strategy/export.py",
@@ -121,6 +125,26 @@
       "sha256": "dbae2d40f2bccbbe64c2ebe941bf13c788f9ff3793b693ee24f0fe6639056ba3"
     },
     {
+      "path": "src/scm_strategy/pattern_bundle.py",
+      "sha256": "48833f5a0c7c4d4f38a1ac5675c498e7ca3aa0de1a1dbe70f13ada8d4ab556ac"
+    },
+    {
+      "path": "src/scm_strategy/pattern_math.py",
+      "sha256": "15c87d7182de29606d49f3ed249b3558c3bd5bd8b1ce1303277e11a457cc15c9"
+    },
+    {
+      "path": "src/scm_strategy/pattern_study.py",
+      "sha256": "05e577c5a7cb6b2ebb5d67b0b9fe9b9d26ceab9106e64d7107b4d8b7b7d67cb0"
+    },
+    {
+      "path": "src/scm_strategy/pattern_synthetic.py",
+      "sha256": "a0f476b4d3055a03edbee1a468222636e9efa03235dab55b932d881db482373c"
+    },
+    {
+      "path": "src/scm_strategy/pattern_view.py",
+      "sha256": "4f74b488ab46cb0f004996d2423145b47345c0e272b15053d293c714ce7d9f27"
+    },
+    {
       "path": "src/scm_strategy/protocols/__init__.py",
       "sha256": "18f2f3dcddab874b6a617ba94064a4d39175cd24de25cf70da82c3b18d57c0a0"
     },
@@ -131,6 +155,14 @@
     {
       "path": "src/scm_strategy/protocols/paper_v1.json",
       "sha256": "55fecf0c2d3748f7ec8b2c403563c1ab165c1aea09e58147940c0ca4be278f88"
+    },
+    {
+      "path": "src/scm_strategy/protocols/pattern-bundle-v1.schema.json",
+      "sha256": "898c9b4af3f73ff8a7492b3d3fcccefc8f84684fdf0c960d2be122723b12a4e2"
+    },
+    {
+      "path": "src/scm_strategy/protocols/pattern_v1.json",
+      "sha256": "be932b9aa84fbc0c26da286d69a5f4aa403e7ab399cefa2da1ccd01bee73ff9b"
     },
     {
       "path": "src/scm_strategy/schema.py",
@@ -161,12 +193,16 @@
       "sha256": "58527dc3a615ff7a545e97525b1038d9b89a8b0fad9895cd1871a8350424620c"
     },
     {
+      "path": "tests/test_pattern_study.py",
+      "sha256": "09eb64af524ae375f07f0d84fe3591a77a7cc733d1b35db7ed44f735b964183c"
+    },
+    {
       "path": "tests/test_release_audit.py",
       "sha256": "6677224cb1721394b65ec159e026c42749220a1ed5ff494e3a194c348f196ffa"
     },
     {
       "path": "tools/audit_release.py",
-      "sha256": "d42cf3119140967a30a328f0565d26bfa2e27250b2d2be288180471fc1d8fc4f"
+      "sha256": "2d7f3ea2fd43686668af6e3e9b70deca28b8700b68de0d6df944661e188ebab3"
     },
     {
       "path": "tools/generate_contracts.py",
@@ -174,15 +210,15 @@
     },
     {
       "path": "uv.lock",
-      "sha256": "0c67050b1d91ff9a8cfd5c3e09d65286885f8b47af7f6e62d013b1c3170066e3"
+      "sha256": "1f0e9073de54eadfddd8894e8745f9ff243aaf1323df7102499160aca936bf9f"
     },
     {
       "path": "web/README.md",
-      "sha256": "fc9276cc073aa24b8bca63aa187460f5799a3ded689918a52bc572413d0f84b8"
+      "sha256": "02cf831fc39306bf908d412df3e7bb92533d6a3d85dcc1b52be4fdada4d5beeb"
     },
     {
       "path": "web/app.js",
-      "sha256": "38d345f5768b576b61e8c3c88f360bd87e9c92ab75197b349295513eaf1e7270"
+      "sha256": "1f7a8778ca4512b5b3758f723440427ea4fca77d5b1708ab52afb25ab5a0fd2e"
     },
     {
       "path": "web/app.test.cjs",
@@ -193,12 +229,28 @@
       "sha256": "6e54b2de5736ead6bca17fd3336e4abcec1a142488398a90c7c0336e5cdb75f7"
     },
     {
+      "path": "web/assets/F1_coverage.png",
+      "sha256": "a58069003988f50d49cd722fac65429f097b5de70f4890837a9391a3e86a0703"
+    },
+    {
+      "path": "web/assets/F2_geometry_repeatability.png",
+      "sha256": "4800ab3d07d63dea3040ee119d5ed4bbdeae6ebb31e618beb8344966f2472b3a"
+    },
+    {
       "path": "web/assets/F2_prediction_sensitivity.png",
       "sha256": "270c64188a7ba7c0b54931dff79eafd7f0dd93384fc6e8b646b930c15ea66932"
     },
     {
+      "path": "web/assets/F3_associations.png",
+      "sha256": "52487b5eb793b0a96d5f4f2bda5a94473f0120ab278c3bbc997681a2b935cc90"
+    },
+    {
       "path": "web/assets/F3_morphology_associations.png",
       "sha256": "08202657baa42cddf4c4600b3e41fc9282480acc2a46f33b91e7a5c57ada6c80"
+    },
+    {
+      "path": "web/assets/F4_joint_proximity_representation.png",
+      "sha256": "de3b6a9a57cb2c47fe8b489f32d82bb44599225ddf149737e8ca84681482d872"
     },
     {
       "path": "web/assets/F4_measurement_calibration.png",
@@ -210,11 +262,15 @@
     },
     {
       "path": "web/assets/manifest.json",
-      "sha256": "596cc3f0aec2676b1e3e114e081f206246d7c7f6f8c0f3942919c9b710b8e91c"
+      "sha256": "bfa350e0f0372e0ccfaf8503d905ad5143b7627e93c38df308da155377c611ac"
     },
     {
       "path": "web/data/demo.json",
       "sha256": "d57cc852d535b63ff1a19f67c5f2506dd7f3fdddef97e32d9d151bbf092b3cef"
+    },
+    {
+      "path": "web/data/pattern-demo.json",
+      "sha256": "4d70cfb4e5b7df024cc360188a5b908dc5824cc43755db6ced36d2e5d0ba952f"
     },
     {
       "path": "web/fixtures/README.md",
@@ -230,11 +286,19 @@
     },
     {
       "path": "web/index.html",
-      "sha256": "68b5e5ced976bcf6210938a410a895a7e49b7313576c60ffdb34d4572f0d3a88"
+      "sha256": "7cddab6fef15befe624100ead5fc7e8f08a5faaffdcc396b3ad47cdd67de3a72"
+    },
+    {
+      "path": "web/pattern.js",
+      "sha256": "bd665b84727dc93622a9a232965b9148c01317c9a93155e01edaf207eccab92c"
+    },
+    {
+      "path": "web/pattern.test.cjs",
+      "sha256": "8017d327b3400a64f69228096a82fc155b188814641ce1aef175e992b8a8b773"
     },
     {
       "path": "web/styles.css",
-      "sha256": "805d5ac1f5c3af7fabba04d0e8952ec2680f61dcdc3eecf2249307a7579ed359"
+      "sha256": "cc7f87be85336bf25c25ceed516eeefa0c5f57f8e8859c7887182f2e4dacba43"
     },
     {
       "path": "web/test-dom.cjs",
@@ -245,263 +309,8 @@
       "sha256": "c94e66f080b76edb612935f1b62b375ee829b1d7789311643cba123ff1d69db2"
     }
   ],
-  "wheel": {
-    "filename": "scm_strategy-0.2.0-py3-none-any.whl",
-    "files": [
-      "scm_strategy/__init__.py",
-      "scm_strategy/__main__.py",
-      "scm_strategy/analysis.py",
-      "scm_strategy/cli.py",
-      "scm_strategy/export.py",
-      "scm_strategy/features.py",
-      "scm_strategy/paper_bundle.py",
-      "scm_strategy/paper_report.py",
-      "scm_strategy/paper_study.py",
-      "scm_strategy/paper_synthetic.py",
-      "scm_strategy/schema.py",
-      "scm_strategy/statistics.py",
-      "scm_strategy/synthetic.py",
-      "scm_strategy/protocols/__init__.py",
-      "scm_strategy/protocols/paper-bundle-v1.schema.json",
-      "scm_strategy/protocols/paper_v1.json",
-      "scm_strategy/THIRD_PARTY_NOTICES.md",
-      "scm_strategy-0.2.0.dist-info/METADATA",
-      "scm_strategy-0.2.0.dist-info/WHEEL",
-      "scm_strategy-0.2.0.dist-info/entry_points.txt",
-      "scm_strategy-0.2.0.dist-info/licenses/LICENSE",
-      "scm_strategy-0.2.0.dist-info/RECORD"
-    ],
-    "unexpected_members": []
-  },
-  "sdist": {
-    "filename": "scm_strategy-0.2.0.tar.gz",
-    "files": [
-      ".gitignore",
-      "CITATION.cff",
-      "LICENSE",
-      "PKG-INFO",
-      "README.md",
-      "THIRD_PARTY_NOTICES.md",
-      "docs/data-availability.md",
-      "docs/data-contract.md",
-      "docs/methods.md",
-      "docs/migration_sources.json",
-      "docs/paper-reproduction.md",
-      "docs/paper-study.md",
-      "docs/web-contract.md",
-      "examples/synthetic/metadata.json",
-      "examples/synthetic/participants.csv",
-      "publishing_audit.json",
-      "pyproject.toml",
-      "release_allowlist.txt",
-      "schemas/metadata-v1.schema.json",
-      "schemas/participant-record-v1.schema.json",
-      "schemas/web-v1.schema.json",
-      "src/scm_strategy/__init__.py",
-      "src/scm_strategy/__main__.py",
-      "src/scm_strategy/analysis.py",
-      "src/scm_strategy/cli.py",
-      "src/scm_strategy/export.py",
-      "src/scm_strategy/features.py",
-      "src/scm_strategy/paper_bundle.py",
-      "src/scm_strategy/paper_report.py",
-      "src/scm_strategy/paper_study.py",
-      "src/scm_strategy/paper_synthetic.py",
-      "src/scm_strategy/protocols/__init__.py",
-      "src/scm_strategy/protocols/paper-bundle-v1.schema.json",
-      "src/scm_strategy/protocols/paper_v1.json",
-      "src/scm_strategy/schema.py",
-      "src/scm_strategy/statistics.py",
-      "src/scm_strategy/synthetic.py",
-      "tests/test_contract_and_cli.py",
-      "tests/test_features_and_statistics.py",
-      "tests/test_paper_report.py",
-      "tests/test_paper_study.py",
-      "tests/test_release_audit.py",
-      "tools/audit_release.py",
-      "tools/generate_contracts.py",
-      "uv.lock",
-      "web/README.md",
-      "web/app.js",
-      "web/app.test.cjs",
-      "web/assets/F1_cohort_flow_selection.png",
-      "web/assets/F2_prediction_sensitivity.png",
-      "web/assets/F3_morphology_associations.png",
-      "web/assets/F4_measurement_calibration.png",
-      "web/assets/favicon.svg",
-      "web/assets/manifest.json",
-      "web/data/demo.json",
-      "web/fixtures/README.md",
-      "web/fixtures/synthetic-local-study.json",
-      "web/fixtures/synthetic-local-study.recipe.json",
-      "web/index.html",
-      "web/styles.css",
-      "web/test-dom.cjs",
-      "web/validation.json"
-    ],
-    "matches_explicit_source_allowlist": true
-  },
+  "wheel": null,
+  "sdist": null,
   "issues": [],
-  "license_scope": "BSD-3-Clause candidate for new contributions only; authorship and public citation metadata remain to be confirmed.",
-  "frozen_candidate_version": "0.2.0",
-  "private_catalog_checks": {
-    "real_identifier_matches": 0,
-    "raw_data_hash_matches": 0,
-    "private_values_or_catalog_not_exported": true
-  },
-  "synthetic_fixture_checks": {
-    "compact_example_recipe_verified": true,
-    "public_demo_regenerated_exactly": true,
-    "local_fixture_regenerated_exactly": true,
-    "public_demo_sha256": "d57cc852d535b63ff1a19f67c5f2506dd7f3fdddef97e32d9d151bbf092b3cef",
-    "local_fixture_sha256": "766adb416106ee8cfa91ada5aebbc7f2ea69186c7d93a41f6bd9315f62a76b2e",
-    "no_empirical_inputs_used": true,
-    "local_fixture_bootstrap_draws": 12,
-    "public_demo_bootstrap_draws": 40
-  },
-  "tests": {
-    "source_python_tests": 33,
-    "source_python_passed": 33,
-    "node_tests": 21,
-    "node_passed": 21,
-    "core_wheel_without_matplotlib": {
-      "mode": "core",
-      "version": "0.2.0",
-      "matplotlib_absent": true,
-      "compact_demo_validate_export": true,
-      "paper_compute_only_22_analyses": true,
-      "local_view_without_matplotlib": true,
-      "report_without_extra_rejected_with_installation_hint": true,
-      "synthetic_draws": 10
-    },
-    "paper_extra_wheel": {
-      "mode": "paper",
-      "version": "0.2.0",
-      "paper_extra_available": true,
-      "analyses": 22,
-      "report_main_and_supplement_tables": true,
-      "aggregate_figures": 4,
-      "local_view_22_analyses": true,
-      "calibration_cli_smoke": true,
-      "synthetic_draws": 10,
-      "full_empirical_uncertainty_claimed": false
-    },
-    "empirical_2000_draw_models_rerun": false
-  },
-  "path_scan_regression": {
-    "bare_policy_prefixes_allowed": true,
-    "validator_regex_constants_allowed": true,
-    "named_Users_home_Volumes_paths_rejected": true,
-    "unicode_username_checked": true,
-    "no_file_exemption_used": true
-  },
-  "dependency_license_inventory": [
-    {
-      "name": "contourpy",
-      "version": "1.4.0",
-      "license_expression": "BSD-3-Clause",
-      "license_first_line": "",
-      "license_files_count": 1
-    },
-    {
-      "name": "cycler",
-      "version": "0.12.1",
-      "license_expression": null,
-      "license_first_line": "Copyright (c) 2015, matplotlib project",
-      "license_files_count": 1
-    },
-    {
-      "name": "fonttools",
-      "version": "4.68.0",
-      "license_expression": null,
-      "license_first_line": "MIT",
-      "license_files_count": 2
-    },
-    {
-      "name": "kiwisolver",
-      "version": "1.5.1",
-      "license_expression": null,
-      "license_first_line": "=========================",
-      "license_files_count": 1
-    },
-    {
-      "name": "matplotlib",
-      "version": "3.11.2",
-      "license_expression": null,
-      "license_first_line": "License agreement for matplotlib versions 1.3.0 and later",
-      "license_files_count": 3
-    },
-    {
-      "name": "numpy",
-      "version": "2.5.4",
-      "license_expression": "BSD-3-Clause AND 0BSD AND MIT AND Zlib AND CC0-1.0",
-      "license_first_line": "",
-      "license_files_count": 20
-    },
-    {
-      "name": "packaging",
-      "version": "26.3",
-      "license_expression": "Apache-2.0 OR BSD-2-Clause",
-      "license_first_line": "",
-      "license_files_count": 5
-    },
-    {
-      "name": "pillow",
-      "version": "13.0.0",
-      "license_expression": "MIT-CMU",
-      "license_first_line": "",
-      "license_files_count": 1
-    },
-    {
-      "name": "pyparsing",
-      "version": "3.3.3",
-      "license_expression": "MIT",
-      "license_first_line": "",
-      "license_files_count": 1
-    },
-    {
-      "name": "python-dateutil",
-      "version": "3.0.0",
-      "license_expression": null,
-      "license_first_line": "Dual License",
-      "license_files_count": 1
-    },
-    {
-      "name": "scipy",
-      "version": "1.18.1",
-      "license_expression": null,
-      "license_first_line": "Copyright (c) 2001-2002 Enthought, Inc. 2003, SciPy Developers.",
-      "license_files_count": 5
-    },
-    {
-      "name": "scm-strategy",
-      "version": "0.2.0",
-      "license_expression": "BSD-3-Clause",
-      "license_first_line": "",
-      "license_files_count": 2
-    },
-    {
-      "name": "six",
-      "version": "1.17.0",
-      "license_expression": null,
-      "license_first_line": "MIT",
-      "license_files_count": 1
-    },
-    {
-      "name": "tzdata",
-      "version": "2026.6",
-      "license_expression": null,
-      "license_first_line": "Apache-2.0",
-      "license_files_count": 2
-    }
-  ],
-  "wheel_sha256": "563ce9e948770761846277a2e8ea650578d621b06b17a9a0f936b704b7216b93",
-  "source_archive_hash_location": "External final release manifest; omitted here to avoid a self-containing archive hash cycle.",
-  "owner_reported_browser_acceptance": {
-    "passed": true,
-    "code_change_after_browser_check": "static GitHub footer link; Node tests rerun",
-    "scope": "desktop and 390px layout; filters; two/third selection; keyboard; models; dialogs; local import/clear and schema errors",
-    "CSP_policy_relaxed": false
-  },
-  "release_action": "Owner publishes this candidate; no GitHub mutation was performed by this packaging task."
+  "license_scope": "BSD-3-Clause for new contributions only; authorship and public citation metadata remain to be confirmed."
 }

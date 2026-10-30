@@ -16,3 +16,6 @@
 #legend-note{white-space:pre-line}
 @media(max-width:760px){.local-source-panel{grid-template-columns:1fr;padding:17px}.source-actions{justify-content:flex-start}.protocol-grid{grid-template-columns:1fr 1fr}.protocol-grid>div{padding:11px}.protocol-grid dd{font-size:12px}.local-tag{display:inline-block;margin-top:12px;font-size:11px}.local-source-panel .button.secondary{font-size:11px}.study-table{font-size:10px}}
 @media(max-width:440px){.header-inner{padding:12px 14px;column-gap:10px}.point-picker{gap:8px}.point-picker .button{padding:8px;font-size:10px}}
+
+/* Model-coordinate trajectory comparison. */
+.trajectory-panel{margin-top:1.5rem;border-top:1px solid var(--line,#dce5e9);padding-top:1.25rem}.trajectory-panel>p{max-width:78ch;color:#536874;line-height:1.65}.trajectory-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:1rem}.trajectory-card{min-width:0;background:#f8fbfc;border:1px solid #dce5e9;border-radius:12px;padding:1rem}.trajectory-card svg{display:block;width:100%;height:auto}.trajectory-card p{display:inline-block;margin:0 .8rem .25rem 0;font-size:.82rem}.trajectory-a{color:#007787}.trajectory-b{color:#a64e25}#pattern-model-content .table-scroll{margin:1rem 0}#pattern-model-content .study-table{min-width:720px}@media(max-width:700px){.trajectory-grid{grid-template-columns:1fr}.trajectory-card{padding:.65rem}}
